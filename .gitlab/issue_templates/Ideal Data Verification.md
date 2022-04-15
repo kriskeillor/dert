@@ -21,9 +21,9 @@ real_ideal_test_process
 | 4             | y5 ± y5_e                                 |
 
 **Verification Result**:
-0 - Verification process was not completed.
-1 - Requirement was NOT met.
-2 - Requirement was NOT met, but the verification process was not ideal so the result may not be accurate or complete.
-3 - Requirement *was* met, but the verification process was not ideal so the result may not be accurate or complete.
-4 - Requirement *was* met.
+0 - Verification process was not completed.  
+1 - Requirement was NOT met.  
+2 - Requirement was NOT met, but the verification process was not ideal so the result may not be accurate or complete.  
+3 - Requirement *was* met, but the verification process was not ideal so the result may not be accurate or complete.  
+4 - Requirement *was* met.  
 X - Requirement was not approved, so it could not be verified.
