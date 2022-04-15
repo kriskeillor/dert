@@ -1,10 +1,10 @@
 **Test Parameter**: test_param  
 **Test Parameter Unit**:  test_param_unit
 
-** Ideal Verification Process**:  
+**Ideal Verification Process**:  
 ideal_test_process
 
-** Real Verification Process**:  
+**Real Verification Process**:  
 real_test_process
 
 **Verification Equipment**:  
