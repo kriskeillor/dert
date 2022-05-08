@@ -1,7 +1,7 @@
 #ifndef DERT_HEADER
 #define DERT_HEADER
 
-enum State{Startup, SenseSoil, SenseAir, SenseLight, CtrlLight};
+enum State{Startup, SenseSoil, SenseAir, SenseLight, ReportData};
 
 #define GPIO_I2C_SDA 10
 #define GPIO_I2C_SCL 11
@@ -20,5 +20,9 @@ enum State{Startup, SenseSoil, SenseAir, SenseLight, CtrlLight};
 
 bool i2c_res_addr(uint8_t addr);
 void i2c_scan(void);
+
+// Sensors
+#define BH1750_ADDR 0x23
+#define SHT30_ADDR 0x44
 
 #endif
