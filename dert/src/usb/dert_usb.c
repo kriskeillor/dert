@@ -21,6 +21,14 @@ int main() {
     int lifespan = 0;
     int state = Startup;
 
+    // Light sensor fields
+    uint8_t bh1750_dat_tx;
+    uint8_t bh1750_dat_rx[2];
+    int bh1750_dat_err;
+
+    // Air sensor fields
+    int8_t sht30_dat;
+
     // Wait for PuTTY to connect (USB-only)
     sleep_ms(5000);
 
@@ -37,8 +45,8 @@ int main() {
                 i2c_init(i2c_default, 100*1000);
                 gpio_set_function(GPIO_I2C_SDA, GPIO_FUNC_I2C);
                 gpio_set_function(GPIO_I2C_SCL, GPIO_FUNC_I2C);
-                gpio_pull_up(GPIO_I2C_SDA);
-                gpio_pull_up(GPIO_I2C_SCL);
+                //gpio_pull_up(GPIO_I2C_SDA); // Hardware pullups
+                //gpio_pull_up(GPIO_I2C_SCL); // Hardware pullups
                 bi_decl(bi_2pins_with_func(GPIO_I2C_SDA, GPIO_I2C_SCL, GPIO_FUNC_I2C));
 
                 // gpio_init(GPIO_LED0); ///!\ No current-limiting resistor in board rev 0.9.3
@@ -60,29 +68,53 @@ int main() {
 
             case SenseSoil:
                 printf("    DERT state: Sensing soil!\n");
-                gpio_put(GPIO_HVR, 0);
+                printf("                Controlling pumps!\n");
+                gpio_put(GPIO_LVR1, 1);
+                gpio_put(GPIO_LVR2, 1);
                 i2c_scan();
                 state = SenseAir;
                 break;
 
             case SenseAir:
                 printf("    DERT state: Sensing air!\n");
+                gpio_put(GPIO_LVR1, 0); // Disable pump relay
+                gpio_put(GPIO_LVR2, 0); // Disable pump relay
                 state = SenseLight;
                 break;
 
             case SenseLight:
-                printf("    DERT state: Sensing lights!\n");
-                state = CtrlLight;
+                printf("    DERT state: Sensing light!\n");
+                bh1750_dat_tx = 0b00010000; // Continous H-Res Mode instruction
+                bh1750_dat_err = i2c_write_blocking(&i2c1_inst, BH1750_ADDR, &bh1750_dat_tx, 1, false);
+                if (bh1750_dat_err == -1 || bh1750_dat_err == -2 || bh1750_dat_err == -3)
+                    printf("                Error %d writing to BH1750!\n", bh1750_dat_err);
+                else
+                    printf("                Wrote %d byte to BH1750.\n", bh1750_dat_err);
+
+                sleep_ms(185);
+
+                bh1750_dat_err = i2c_read_blocking(&i2c1_inst, BH1750_ADDR, bh1750_dat_rx, 2, false);
+                if (bh1750_dat_err == -1 || bh1750_dat_err == -2 || bh1750_dat_err == -3)
+                    printf("                Error %d reading from BH1750!\n", bh1750_dat_err);
+                else {
+                    printf("                Read %d bytes from BH1750.\n", bh1750_dat_err);
+                    printf("                Raw lux measurement: %d\n", bh1750_dat_rx);
+                }
+
+                printf("                Controlling lights!\n");
+                gpio_put(GPIO_HVR, 1);
+                state = ReportData;
                 break;
 
-            case CtrlLight:
-                printf("    DERT state: Controlling lights!\n");
-                gpio_put(GPIO_HVR, 1);
+            case ReportData:
+                printf("    DERT state: Reporting data!\n");
+                printf("                Reporting errors!\n");
+                gpio_put(GPIO_HVR, 0); // Disable light relay
                 state = SenseSoil;
                 break;
 
             default:
-                printf("/!\\ DERT state out-of-enum at %d\n", state);
+                printf("/!\\ DERT state out-of-bounds at %d\n", state);
                 break;
         }
 
