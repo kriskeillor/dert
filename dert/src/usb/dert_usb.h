@@ -21,8 +21,13 @@ enum State{Startup, SenseSoil, SenseAir, SenseLight, ReportData};
 bool i2c_res_addr(uint8_t addr);
 void i2c_scan(void);
 
-// Sensors
+// SENSORS
+// Light Sensor
 #define BH1750_ADDR 0x23
+// Air Sensor
 #define SHT30_ADDR 0x44
+// Soil Sensors 1 & 2
+#define MOISTURE_SNS_1_ADDR 0x20
+#define MOISTURE_SNS_2_ADDR 0x21
 
 #endif

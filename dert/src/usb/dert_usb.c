@@ -27,7 +27,14 @@ int main() {
     int bh1750_dat_err;
 
     // Air sensor fields
+    uint8_t sht30_dat_tx;
+    uint8_t sht30_dat_rx[2];
     int8_t sht30_dat;
+
+    // Soil sensor fields
+    uint8_t moisture_sns_dat_tx;
+    uint8_t moisture_sns_dat_rx[2];
+    int moisture_sns_dat_err;
 
     // Wait for PuTTY to connect (USB-only)
     sleep_ms(5000);
@@ -68,23 +75,57 @@ int main() {
 
             case SenseSoil:
                 printf("    DERT state: Sensing soil!\n");
+                // Sensor 1
+                moisture_sns_dat_tx = 0x02;
+                moisture_sns_dat_err = i2c_write_blocking(&i2c1_inst, MOISTURE_SNS_1_ADDR, &moisture_sns_dat_tx, 1, false);
+                if (moisture_sns_dat_err < 0)
+                    printf("                Error %d writing to Moisture Sensor 1!\n", moisture_sns_dat_err);
+                else
+                    printf("                Wrote %d byte to Moisture Sensor 1.\n", moisture_sns_dat_err);
+
+                moisture_sns_dat_err = i2c_read_blocking(&i2c1_inst, MOISTURE_SNS_1_ADDR, moisture_sns_dat_rx, 1, false);
+                if (moisture_sns_dat_err < 0)
+                    printf("                Error %d reading from Moisture Sensor 1!\n", moisture_sns_dat_err);
+                else {
+                    printf("                Wrote %d byte to Moisture Sensor 1.\n", moisture_sns_dat_err);
+                    printf("                Raw address reading: %d\n", moisture_sns_dat_rx);
+                }
+
+                // Sensor 2
+                moisture_sns_dat_tx = 0x02;
+                moisture_sns_dat_err = i2c_write_blocking(&i2c1_inst, MOISTURE_SNS_2_ADDR, &moisture_sns_dat_tx, 1, false);
+                if (moisture_sns_dat_err < 0)
+                    printf("                Error %d writing to Moisture Sensor 2!\n", moisture_sns_dat_err);
+                else
+                    printf("                Wrote %d byte to Moisture Sensor 2.\n", moisture_sns_dat_err);
+
+                moisture_sns_dat_err = i2c_read_blocking(&i2c1_inst, MOISTURE_SNS_2_ADDR, moisture_sns_dat_rx, 1, false);
+                if (moisture_sns_dat_err < 0)
+                    printf("                Error %d reading from Moisture Sensor 2!\n", moisture_sns_dat_err);
+                else {
+                    printf("                Wrote %d byte to Moisture Sensor 2.\n", moisture_sns_dat_err);
+                    printf("                Raw address reading: %d\n", moisture_sns_dat_rx);
+                }
+
+                // (Placeholder) Activate Loww-Voltage Relays
                 printf("                Controlling pumps!\n");
                 gpio_put(GPIO_LVR1, 1);
                 gpio_put(GPIO_LVR2, 1);
-                i2c_scan();
+
                 state = SenseAir;
                 break;
 
             case SenseAir:
                 printf("    DERT state: Sensing air!\n");
-                gpio_put(GPIO_LVR1, 0); // Disable pump relay
-                gpio_put(GPIO_LVR2, 0); // Disable pump relay
+                // (Placeholder) Disable Loww-Voltage Relays
+                gpio_put(GPIO_LVR1, 0); // Disable pump 1 relay
+                gpio_put(GPIO_LVR2, 0); // Disable pump 2 relay
                 state = SenseLight;
                 break;
 
             case SenseLight:
                 printf("    DERT state: Sensing light!\n");
-                bh1750_dat_tx = 0b00010000; // Continous H-Res Mode instruction
+                bh1750_dat_tx = 0b00010000; // Continuous H-Res Mode instruction
                 bh1750_dat_err = i2c_write_blocking(&i2c1_inst, BH1750_ADDR, &bh1750_dat_tx, 1, false);
                 if (bh1750_dat_err == -1 || bh1750_dat_err == -2 || bh1750_dat_err == -3)
                     printf("                Error %d writing to BH1750!\n", bh1750_dat_err);
