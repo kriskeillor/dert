@@ -1,0 +1,4 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/dert",
+    "C_Cpp.default.includePath": [ "${workspaceFolder}/dert/include"]
+}
