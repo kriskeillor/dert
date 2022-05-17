@@ -12,7 +12,7 @@
 #include "hardware/gpio.h"
 #include "hardware/i2c.h"
 
-#include "dert_freertos.h"
+#include "dert_2040.h"
 
 //#include "boards/dert.h" // Note: was successfully located, but it caused glitches
 

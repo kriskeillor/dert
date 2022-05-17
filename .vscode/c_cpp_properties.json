@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
+                "${workspaceFolder}/dert/board/*",
                 "${workspaceFolder}/pico-sdk/**",
                 "${workspaceFolder}/FreeRTOS-Kernel/**"
             ],

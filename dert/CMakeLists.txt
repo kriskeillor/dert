@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.12)
 
-# Pull in "includes" folder
+# Pull in "includes" folder and board files
 include_directories(include)
+include_directories(board)
 
 # Pull in SDK (must be before project)
 include(pico_sdk_import.cmake)
