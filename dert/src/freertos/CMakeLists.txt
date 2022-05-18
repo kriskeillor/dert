@@ -4,7 +4,7 @@ if (TARGET tinyusb_device)
             )
 
     # pull in common dependencies
-    target_link_libraries(dert_freertos pico_stdlib hardware_i2c FreeRTOS-Kernel FreeRTOS-Kernel-Heap4)
+    target_link_libraries(dert_freertos pico_stdlib pico_multicore hardware_i2c FreeRTOS-Kernel FreeRTOS-Kernel-Heap4)
 
     # enable usb output, disable uart output
     pico_enable_stdio_usb(dert_freertos 1)

@@ -1,6 +1,5 @@
 /**
  * Copyright (c) 2022 Kris Keillor
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -13,8 +12,6 @@
 #include "hardware/i2c.h"
 
 #include "dert_2040.h"
-
-//#include "boards/dert.h" // Note: was successfully located, but it caused glitches
 
 int main() {
     stdio_init_all();
@@ -39,129 +36,30 @@ int main() {
     // Wait for PuTTY to connect (USB-only)
     sleep_ms(5000);
 
-    while (true) {
-        printf("\nDERT Reporting! %d\n", lifespan);
-        lifespan = lifespan + 1;
+    printf("    DERT state: Starting up!\n");
+    gpio_init(GPIO_I2C_SDA);
+    gpio_init(GPIO_I2C_SCL);
+    i2c_init(i2c_default, 100*1000);
+    gpio_set_function(GPIO_I2C_SDA, GPIO_FUNC_I2C);
+    gpio_set_function(GPIO_I2C_SCL, GPIO_FUNC_I2C);
+    bi_decl(bi_2pins_with_func(GPIO_I2C_SDA, GPIO_I2C_SCL, GPIO_FUNC_I2C));
 
-        switch (state) {
-            // TODO: move functionality in this case to separate method
-            case Startup:
-                printf("    DERT state: Starting up!\n");
-                gpio_init(GPIO_I2C_SDA);
-                gpio_init(GPIO_I2C_SCL);
-                i2c_init(i2c_default, 100*1000);
-                gpio_set_function(GPIO_I2C_SDA, GPIO_FUNC_I2C);
-                gpio_set_function(GPIO_I2C_SCL, GPIO_FUNC_I2C);
-                //gpio_pull_up(GPIO_I2C_SDA); // Hardware pullups
-                //gpio_pull_up(GPIO_I2C_SCL); // Hardware pullups
-                bi_decl(bi_2pins_with_func(GPIO_I2C_SDA, GPIO_I2C_SCL, GPIO_FUNC_I2C));
+    gpio_init(GPIO_LED0);
+    gpio_init(GPIO_LED1);
 
-                // gpio_init(GPIO_LED0); ///!\ No current-limiting resistor in board rev 0.9.3
-                // gpio_init(GPIO_LED1); ///!\ No resistor in board rev 0.9.3
+    gpio_init(GPIO_HVR);
+    gpio_init(GPIO_LVR1);
+    gpio_init(GPIO_LVR2);
+    gpio_set_dir(GPIO_HVR, GPIO_OUT);
+    gpio_set_dir(GPIO_LVR1, GPIO_OUT);
+    gpio_set_dir(GPIO_LVR2, GPIO_OUT);
 
-                gpio_init(GPIO_HVR);
-                gpio_init(GPIO_LVR1);
-                gpio_init(GPIO_LVR2);
-                gpio_set_dir(GPIO_HVR, GPIO_OUT);
-                gpio_set_dir(GPIO_LVR1, GPIO_OUT);
-                gpio_set_dir(GPIO_LVR2, GPIO_OUT);
+    gpio_init(GPIO_DB1);
+    gpio_init(GPIO_DB2);
+    gpio_init(GPIO_DB3);
 
-                //gpio_init(GPIO_DB1); ///!\ Not brought out in board rev 0.9.3
-                //gpio_init(GPIO_DB2); ///!\ Not used in rev 0.9.3
-                //gpio_init(GPIO_DB3); ///!\ Not used in rev 0.9.3
-
-                state = SenseSoil;
-                break;
-
-            case SenseSoil:
-                printf("    DERT state: Sensing soil!\n");
-                // Sensor 1
-                moisture_sns_dat_tx = 0x02;
-                moisture_sns_dat_err = i2c_write_blocking(&i2c1_inst, MOISTURE_SNS_1_ADDR, &moisture_sns_dat_tx, 1, false);
-                if (moisture_sns_dat_err < 0)
-                    printf("                Error %d writing to Moisture Sensor 1!\n", moisture_sns_dat_err);
-                else
-                    printf("                Wrote %d byte to Moisture Sensor 1.\n", moisture_sns_dat_err);
-
-                moisture_sns_dat_err = i2c_read_blocking(&i2c1_inst, MOISTURE_SNS_1_ADDR, moisture_sns_dat_rx, 1, false);
-                if (moisture_sns_dat_err < 0)
-                    printf("                Error %d reading from Moisture Sensor 1!\n", moisture_sns_dat_err);
-                else {
-                    printf("                Wrote %d byte to Moisture Sensor 1.\n", moisture_sns_dat_err);
-                    printf("                Raw address reading: %d\n", moisture_sns_dat_rx);
-                }
-
-                // Sensor 2
-                moisture_sns_dat_tx = 0x02;
-                moisture_sns_dat_err = i2c_write_blocking(&i2c1_inst, MOISTURE_SNS_2_ADDR, &moisture_sns_dat_tx, 1, false);
-                if (moisture_sns_dat_err < 0)
-                    printf("                Error %d writing to Moisture Sensor 2!\n", moisture_sns_dat_err);
-                else
-                    printf("                Wrote %d byte to Moisture Sensor 2.\n", moisture_sns_dat_err);
-
-                moisture_sns_dat_err = i2c_read_blocking(&i2c1_inst, MOISTURE_SNS_2_ADDR, moisture_sns_dat_rx, 1, false);
-                if (moisture_sns_dat_err < 0)
-                    printf("                Error %d reading from Moisture Sensor 2!\n", moisture_sns_dat_err);
-                else {
-                    printf("                Wrote %d byte to Moisture Sensor 2.\n", moisture_sns_dat_err);
-                    printf("                Raw address reading: %d\n", moisture_sns_dat_rx);
-                }
-
-                // (Placeholder) Activate Loww-Voltage Relays
-                printf("                Controlling pumps!\n");
-                gpio_put(GPIO_LVR1, 1);
-                gpio_put(GPIO_LVR2, 1);
-
-                state = SenseAir;
-                break;
-
-            case SenseAir:
-                printf("    DERT state: Sensing air!\n");
-                // (Placeholder) Disable Loww-Voltage Relays
-                gpio_put(GPIO_LVR1, 0); // Disable pump 1 relay
-                gpio_put(GPIO_LVR2, 0); // Disable pump 2 relay
-                state = SenseLight;
-                break;
-
-            case SenseLight:
-                printf("    DERT state: Sensing light!\n");
-                bh1750_dat_tx = 0b00010000; // Continuous H-Res Mode instruction
-                bh1750_dat_err = i2c_write_blocking(&i2c1_inst, BH1750_ADDR, &bh1750_dat_tx, 1, false);
-                if (bh1750_dat_err == -1 || bh1750_dat_err == -2 || bh1750_dat_err == -3)
-                    printf("                Error %d writing to BH1750!\n", bh1750_dat_err);
-                else
-                    printf("                Wrote %d byte to BH1750.\n", bh1750_dat_err);
-
-                sleep_ms(185);
-
-                bh1750_dat_err = i2c_read_blocking(&i2c1_inst, BH1750_ADDR, bh1750_dat_rx, 2, false);
-                if (bh1750_dat_err == -1 || bh1750_dat_err == -2 || bh1750_dat_err == -3)
-                    printf("                Error %d reading from BH1750!\n", bh1750_dat_err);
-                else {
-                    printf("                Read %d bytes from BH1750.\n", bh1750_dat_err);
-                    printf("                Raw lux measurement: %d\n", bh1750_dat_rx);
-                }
-
-                printf("                Controlling lights!\n");
-                gpio_put(GPIO_HVR, 1);
-                state = ReportData;
-                break;
-
-            case ReportData:
-                printf("    DERT state: Reporting data!\n");
-                printf("                Reporting errors!\n");
-                gpio_put(GPIO_HVR, 0); // Disable light relay
-                state = SenseSoil;
-                break;
-
-            default:
-                printf("/!\\ DERT state out-of-bounds at %d\n", state);
-                break;
-        }
-
-        sleep_ms(1000);
-    }
-    return 0;
+    // Initialize FreeRTOS application
+    vTaskStartScheduler();
 }
 
 // Exclude reserved addresses, of the form 000 0xxx or 

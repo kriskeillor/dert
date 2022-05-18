@@ -4,8 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/dert/board/*",
-                "${workspaceFolder}/pico-sdk/**",
-                "${workspaceFolder}/FreeRTOS-Kernel/**"
+                "C:/vsarm/pico-sdk/**",
+                "C:/vsarm/FreeRTOS-Kernel/**"
             ],
             "defines": [
                 "_DEBUG",

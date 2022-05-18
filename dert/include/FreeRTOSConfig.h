@@ -9,7 +9,7 @@
  * the Software, and to permit persons to whom the Software is furnished to do so,
  * subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
+ * The above copyright tice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -41,10 +41,10 @@
  *----------------------------------------------------------*/
 
 /* Scheduler Related */
-#define configUSE_PREEMPTION                    1
+#define configUSE_PREEMPTION                    0
 #define configUSE_TICKLESS_IDLE                 0
 #define configUSE_IDLE_HOOK                     0
-#define configUSE_TICK_HOOK                     1
+#define configUSE_TICK_HOOK                     0
 #define configTICK_RATE_HZ                      ( ( TickType_t ) 1000 )
 #define configMAX_PRIORITIES                    32
 #define configMINIMAL_STACK_SIZE                ( configSTACK_DEPTH_TYPE ) 256
@@ -53,12 +53,12 @@
 #define configIDLE_SHOULD_YIELD                 1
 
 /* Synchronization Related */
-#define configUSE_MUTEXES                       1
-#define configUSE_RECURSIVE_MUTEXES             1
+#define configUSE_MUTEXES                       0
+#define configUSE_RECURSIVE_MUTEXES             0
 #define configUSE_APPLICATION_TASK_TAG          0
-#define configUSE_COUNTING_SEMAPHORES           1
+#define configUSE_COUNTING_SEMAPHORES           0
 #define configQUEUE_REGISTRY_SIZE               8
-#define configUSE_QUEUE_SETS                    1
+#define configUSE_QUEUE_SETS                    0
 #define configUSE_TIME_SLICING                  1
 #define configUSE_NEWLIB_REENTRANT              0
 #define configENABLE_BACKWARD_COMPATIBILITY     0
@@ -75,8 +75,10 @@
 #define configAPPLICATION_ALLOCATED_HEAP        0
 
 /* Hook function related definitions. */
-#define configCHECK_FOR_STACK_OVERFLOW          2
-#define configUSE_MALLOC_FAILED_HOOK            1
+/* Warning: Stack overflow check not implemented */
+#define configCHECK_FOR_STACK_OVERFLOW          0
+/* Warning: Insufficient heap memory fallback method not implemented */
+#define configUSE_MALLOC_FAILED_HOOK            0
 #define configUSE_DAEMON_TASK_STARTUP_HOOK      0
 
 /* Run time and task stats gathering related definitions. */
