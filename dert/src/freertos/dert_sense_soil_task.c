@@ -1,4 +1,23 @@
+/**
+ * Copyright (c) 2022 Kris Keillor
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#include <stdio.h>
+
+#include "pico/stdlib.h"
+#include "pico/binary_info.h"
+#include "hardware/gpio.h"
+#include "hardware/i2c.h"
+
+#include "dert_2040.h"
+
 static void vDertSenseSoil(void *pvParameters) {
+    uint8_t moisture_sns_dat_tx;
+    uint8_t moisture_sns_dat_rx[2];
+    int moisture_sns_dat_err;
+
     for ( ;; ) {
         printf("    DERT state: Sensing soil!\n");
         // Sensor 1

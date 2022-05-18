@@ -1,9 +1,25 @@
-/* Includes */
-#include "Sync.h"
+/* Defines */
+#ifndef mainRUN_FREE_RTOS_ON_CORE
+#define mainRUN_FREE_RTOS_ON_CORE 0
+#endif
+/* FreeROTS "don't block" indicator */
+#define DONT_BLOCK                          ( 0UL )
 
-/* Stubs for all DERT tasks. */
-/* void dert( void ); */
-static void vDertSenseSoil(void *pvParameters);
-static void vDertSenseLight(void *pvParameters);
-static void vDertSenseAir(void *pvParameters);
-static void vDertReportData(void *pvParameters);
+/* Dert Task Definitions */
+#define dTASK_SIZE                          ( 128 )
+
+/* Priorities for DERT tasks. */
+#define dertREPORT_DATA_TASK_PRIORITY       (tskIDLE_PRIORITY + 1UL)
+#define dertSENSE_SOIL_TASK_PRIORITY        (tskIDLE_PRIORITY + 2UL)
+#define dertSENSE_LIGHT_TASK_PRIORITY       (tskIDLE_PRIORITY + 3UL)
+#define dertSENSE_AIR_TASK_PRIORITY         (tskIDLE_PRIORITY + 4UL)
+
+/* Periods for DERT tasks. */
+#define dertREPORT_DATA_TASK_PERIOD         pdMS_TO_TICKS( 10000UL )
+#define dertSENSE_SOIL_TASK_PERIOD          pdMS_TO_TICKS( 10000UL )
+#define dertSENSE_LIGHT_TASK_PERIOD         pdMS_TO_TICKS( 10000UL )
+#define dertSENSE_AIR_TASK_PERIOD           pdMS_TO_TICKS( 10000UL )
+
+/* TODO: Refactor I2C */ 
+bool i2c_res_addr(uint8_t addr);
+void i2c_scan(void);

@@ -1,4 +1,23 @@
+/**
+ * Copyright (c) 2022 Kris Keillor
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#include <stdio.h>
+
+#include "pico/stdlib.h"
+#include "pico/binary_info.h"
+#include "hardware/gpio.h"
+#include "hardware/i2c.h"
+
+#include "dert_2040.h"
+
 static void vDertSenseLight(void *pvParameters) {
+    uint8_t bh1750_dat_tx;
+    uint8_t bh1750_dat_rx[2];
+    int bh1750_dat_err;
+
     for ( ;; ) {
         printf("    DERT state: Sensing light!\n");
         bh1750_dat_tx = 0b00010000; // Continuous H-Res Mode instruction
