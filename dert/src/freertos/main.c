@@ -22,6 +22,9 @@
 #include "dert_2040.h"
 #include "dert.h"
 #include "dert_sense_air_task.h"
+#include "dert_sense_light_task.h"
+#include "dert_sense_soil_task.h"
+#include "dert_report_data_task.h"
 
 int main() {
     stdio_init_all();
@@ -29,7 +32,7 @@ int main() {
     // Wait for PuTTY to connect (USB-only)
     sleep_ms(5000);
 
-    // Initialize RP2040 MCU
+    // RP2040 MCU Initialization
     printf("    DERT state: Starting up!\n");
     gpio_init(GPIO_I2C_SDA);
     gpio_init(GPIO_I2C_SCL);
@@ -52,21 +55,70 @@ int main() {
     gpio_init(GPIO_DB2);
     gpio_init(GPIO_DB3);
 
+    // FreeRTOS Initialization
     // Initialize FreeRTOS application
     vTaskStartScheduler();
+
+    // Variables for creating tasks
     BaseType_t xTaskCreateRet;
     TaskHandle_t xLightHandle = NULL;
+    TaskHandle_t xAirHandle = NULL;
+    TaskHandle_t xSoilHandle = NULL;
+    TaskHandle_t xReportHandle = NULL;
+
+    // Create dert_sense_air_task
     xTaskCreateRet = xTaskCreate(
                         vDertSenseAir,
                         "SENSE_AIR",
                         dTASK_SIZE,
                         (void * ) 0,
+                        dertSENSE_AIR_TASK_PRIORITY,
+                        &xAirHandle);
+    if (xTaskCreateRet == pdPASS) {
+        printf("Air sensing task created!");
+    } else {
+        printf("Air sensing task not created.");
+    }
+    
+    // Create dert_sense_air_task
+    xTaskCreateRet = xTaskCreate(
+                        vDertSenseLight,
+                        "SENSE_LIGHT",
+                        dTASK_SIZE,
+                        (void * ) 0,
                         dertSENSE_LIGHT_TASK_PRIORITY,
                         &xLightHandle);
-
     if (xTaskCreateRet == pdPASS) {
-        printf("Task created!");
+        printf("Light sensing task created!");
     } else {
-        printf("Task not created.");
+        printf("Light sensing task not created.");
+    }
+    
+    // Create dert_sense_,soil_task
+    xTaskCreateRet = xTaskCreate(
+                        vDertSenseSoil,
+                        "SENSE_SOIL",
+                        dTASK_SIZE,
+                        (void * ) 0,
+                        dertSENSE_SOIL_TASK_PRIORITY,
+                        &xSoilHandle);
+    if (xTaskCreateRet == pdPASS) {
+        printf("Soil sensing task created!");
+    } else {
+        printf("Soil sensing task not created.");
+    }
+    
+    // Create dert_report_data_task
+    xTaskCreateRet = xTaskCreate(
+                        vDertReportData,
+                        "REPORT_DATA",
+                        dTASK_SIZE,
+                        (void * ) 0,
+                        dertREPORT_DATA_TASK_PRIORITY,
+                        &xReportHandle);
+    if (xTaskCreateRet == pdPASS) {
+        printf("Data reporting task created!");
+    } else {
+        printf("Data reporting task not created.");
     }
 }

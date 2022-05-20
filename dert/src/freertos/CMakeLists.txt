@@ -7,7 +7,12 @@ if (TARGET tinyusb_device)
     target_link_libraries(main pico_stdlib pico_multicore hardware_i2c FreeRTOS-Kernel FreeRTOS-Kernel-Heap4)
 
     # pull in sources
-    target_sources(main PRIVATE dert_sense_air_task.c)
+    target_sources(main 
+        PRIVATE 
+            dert_sense_air_task.c
+            dert_sense_light_task.c
+            dert_sense_soil_task.c
+            dert_report_data_task.c)
 
     # enable usb output, disable uart output
     pico_enable_stdio_usb(main 1)

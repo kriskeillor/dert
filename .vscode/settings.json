@@ -7,6 +7,11 @@
         "stdio.h": "c",
         "gpio.h": "c",
         "i2c.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "dert_sense_air_task.h": "c",
+        "dert_sense_soil_task.h": "c",
+        "dert_report_data_task.h": "c",
+        "dert_sense_light_task.h": "c",
+        "dert_2040.h": "c"
     }
 }

@@ -13,7 +13,7 @@
 
 #include "dert_2040.h"
 
-static void vDertSenseSoil(void *pvParameters) {
+void vDertSenseSoil(void *pvParameters) {
     uint8_t moisture_sns_dat_tx;
     uint8_t moisture_sns_dat_rx[2];
     int moisture_sns_dat_err;

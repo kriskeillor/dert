@@ -13,7 +13,7 @@
 
 #include "dert_2040.h"
 
-static void vDertSenseLight(void *pvParameters) {
+void vDertSenseLight(void *pvParameters) {
     uint8_t bh1750_dat_tx;
     uint8_t bh1750_dat_rx[2];
     int bh1750_dat_err;
@@ -39,6 +39,5 @@ static void vDertSenseLight(void *pvParameters) {
 
         printf("                Controlling lights!\n");
         gpio_put(GPIO_HVR, 1);
-        state = ReportData;
     }
 }

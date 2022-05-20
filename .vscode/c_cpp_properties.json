@@ -5,6 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/dert/board/*",
                 "C:/vsarm/pico-sdk/**",
+                "C:/VSARM/pico-sdk/src/boards/include/boards",
+                "C:/VSARM/pico-sdk/src/common/pico_base/include",
                 "C:/vsarm/FreeRTOS-Kernel/**"
             ],
             "defines": [
