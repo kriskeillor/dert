@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 3.12)
 
+# Pull in "includes" folder and board files
+include_directories(include)
+include_directories(board)
+
 # Pull in SDK (must be before project)
 include(pico_sdk_import.cmake)
+include(FreeRTOS_Kernel_import.cmake)
 
 project(dert C CXX ASM)
 set(CMAKE_C_STANDARD 11)
