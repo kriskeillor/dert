@@ -55,12 +55,6 @@ int main() {
     gpio_init(GPIO_DB2);
     gpio_init(GPIO_DB3);
 
-    // FreeRTOS Initialization
-    // Initialize FreeRTOS application
-    //printf("    DERT state: Starting task scheduler!\n");
-    //vTaskStartScheduler();
-    //printf("    DERT state: Task scheduler started!\n");
-
     // Variables for creating tasks
     BaseType_t xTaskCreateRet;
     TaskHandle_t xLightHandle = NULL;
@@ -68,7 +62,6 @@ int main() {
     TaskHandle_t xSoilHandle = NULL;
     TaskHandle_t xReportHandle = NULL;
 
-    //printf("    DERT state: creating sense_air_task!\n");
     // Create dert_sense_air_task
     xTaskCreateRet = xTaskCreate(
                         vDertSenseAir,
@@ -76,14 +69,11 @@ int main() {
                         dTASK_SIZE,
                         NULL, //(void * ) 0,
                         dertSENSE_AIR_TASK_PRIORITY,
-                        NULL); //&xAirHandle);
-    if (xTaskCreateRet == pdPASS) {
-        //printf("Air sensing task created!\n");
-    } else {
-        //printf("Air sensing task not created.\n");
+                        &xAirHandle);
+    if (xTaskCreateRet != pdPASS) {
+        // error state
     }
-    
-    //printf("    DERT state: creating sense_light_task!\n");
+
     // Create dert_sense_air_task
     xTaskCreateRet = xTaskCreate(
                         vDertSenseLight,
@@ -91,29 +81,23 @@ int main() {
                         dTASK_SIZE,
                         (void * ) 0,
                         dertSENSE_LIGHT_TASK_PRIORITY,
-                        NULL); //&xLightHandle);
-    if (xTaskCreateRet == pdPASS) {
-        //printf("Light sensing task created!\n");
-    } else {
-        //printf("Light sensing task not created.\n");
+                        &xLightHandle);
+    if (xTaskCreateRet != pdPASS) {
+        // error state
     }
-    
-    //printf("    DERT state: creating sense_soil_task!\n");
+
     // Create dert_sense_,soil_task
     xTaskCreateRet = xTaskCreate(
                         vDertSenseSoil,
                         "SENSE_SOIL",
                         dTASK_SIZE,
-                        NULL, //(void * ) 0,
+                        (void * ) 0,
                         dertSENSE_SOIL_TASK_PRIORITY,
                         &xSoilHandle);
-    if (xTaskCreateRet == pdPASS) {
-        //printf("Soil sensing task created!\n");
-    } else {
-        //printf("Soil sensing task not created.\n");
+    if (xTaskCreateRet != pdPASS) {
+        // errpr state
     }
-    
-    //printf("    DERT state: creating report_data_task!\n");
+
     // Create dert_report_data_task
     xTaskCreateRet = xTaskCreate(
                         vDertReportData,
@@ -123,12 +107,9 @@ int main() {
                         dertREPORT_DATA_TASK_PRIORITY,
                         &xReportHandle);
     if (xTaskCreateRet == pdPASS) {
-        //printf("Data reporting task created!\n");
-    } else {
-        //printf("Data reporting task not created.\n");
+        // error state
     }
-    
-    printf("    End of dert init");
+
     vTaskStartScheduler();
 
     printf("    vTaskScheduler lost control.");
