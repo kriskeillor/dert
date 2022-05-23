@@ -53,6 +53,9 @@ int main() {
     gpio_init(GPIO_DB1);
     gpio_init(GPIO_DB2);
     gpio_init(GPIO_DB3);
+    gpio_set_dir(GPIO_DB1, GPIO_OUT);
+    gpio_set_dir(GPIO_DB2, GPIO_OUT);
+    gpio_set_dir(GPIO_DB3, GPIO_OUT);
 
     // Indicate startup is finished, waiting 5s for PuTTY connection
     gpio_put(GPIO_LED0, 1);
@@ -104,7 +107,7 @@ int main() {
                         dertSENSE_SOIL_TASK_PRIORITY,
                         &xSoilHandle);
     if (xTaskCreateRet != pdPASS) {
-        // errpr state
+        // error state
     }
 
     // Create dert_report_data_task
