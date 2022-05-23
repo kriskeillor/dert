@@ -20,8 +20,6 @@
 #define GPIO_DB3 24
 
 // SENSORS
-// Light Sensor
-#define BH1750_ADDR 0x23
 // Air Sensor
 #define SHT30_ADDR 0x44
 // Soil Sensors 1 & 2

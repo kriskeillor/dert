@@ -23,8 +23,6 @@ void vDertSenseAir(void *pvParameters) {
     int8_t sht30_dat;
 
     for ( ;; ) { 
-        // Turn on debug bit 2 for task
-        gpio_put(GPIO_DB2, 1);
         printf("    DERT state: Sensing air!");
         // (Placeholder) Disable All Relays
         printf("                Disabling pumps and lights!");
@@ -32,8 +30,6 @@ void vDertSenseAir(void *pvParameters) {
         gpio_put(GPIO_LVR2, 1);
         gpio_put(GPIO_HVR, 1);
 
-        // Turn off debug bit 2
-        gpio_put(GPIO_DB2, 0);
         vTaskDelay( dertSENSE_AIR_TASK_PERIOD );
     }
 }

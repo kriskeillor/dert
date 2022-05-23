@@ -21,7 +21,6 @@ void vDertReportData(void *pvParameters) {
     for ( ;; ) {
         printf("    DERT state: Reporting data!");
         printf("                Reporting errors!");
-        gpio_put(GPIO_HVR, 0); // Disable light relay
 
         vTaskDelay( dertREPORT_DATA_TASK_PERIOD );
     }
