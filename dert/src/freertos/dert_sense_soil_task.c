@@ -56,6 +56,11 @@ void vDertSenseSoil(void *pvParameters) {
             printf("                Raw address reading: %d", moisture_sns_dat_rx);
         }
 
+        // (Placeholder) Enable Low-Voltage Relays
+        printf("                Controlling pumps!");
+        gpio_put(GPIO_LVR1, 0);
+        gpio_put(GPIO_LVR2, 0);
+
         vTaskDelay( dertSENSE_SOIL_TASK_PERIOD );
     }
 }
