@@ -29,9 +29,6 @@
 int main() {
     stdio_init_all();
 
-    // Wait for PuTTY to connect (USB-only)
-    sleep_ms(5000);
-
     // RP2040 MCU Initialization
     printf("    DERT state: Starting up!\n");
     gpio_init(GPIO_I2C_SDA);
@@ -43,6 +40,8 @@ int main() {
 
     gpio_init(GPIO_LED0);
     gpio_init(GPIO_LED1);
+    gpio_set_dir(GPIO_LED0, GPIO_OUT);
+    gpio_set_dir(GPIO_LED1, GPIO_OUT);
 
     gpio_init(GPIO_HVR);
     gpio_init(GPIO_LVR1);
@@ -54,6 +53,19 @@ int main() {
     gpio_init(GPIO_DB1);
     gpio_init(GPIO_DB2);
     gpio_init(GPIO_DB3);
+    gpio_set_dir(GPIO_DB1, GPIO_OUT);
+    gpio_set_dir(GPIO_DB2, GPIO_OUT);
+    gpio_set_dir(GPIO_DB3, GPIO_OUT);
+
+    // Indicate startup is finished, waiting 5s for PuTTY connection
+    gpio_put(GPIO_LED0, 1);
+
+    // Wait for PuTTY to connect (USB-only)
+    sleep_ms(5000);
+
+    // Indicate wait is finished, starting FreeRTOS
+    gpio_put(GPIO_LED0, 0);
+    gpio_put(GPIO_LED1, 1);
 
     // Variables for creating tasks
     BaseType_t xTaskCreateRet;
@@ -95,7 +107,7 @@ int main() {
                         dertSENSE_SOIL_TASK_PRIORITY,
                         &xSoilHandle);
     if (xTaskCreateRet != pdPASS) {
-        // errpr state
+        // error state
     }
 
     // Create dert_report_data_task
@@ -113,4 +125,6 @@ int main() {
     vTaskStartScheduler();
 
     printf("    vTaskScheduler lost control.");
+    // Indicate error state
+    gpio_put(GPIO_LED0, 1);
 }
