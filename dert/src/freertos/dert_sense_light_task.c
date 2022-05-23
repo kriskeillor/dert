@@ -25,16 +25,29 @@ void vDertSenseLight(void *pvParameters) {
 
     for ( ;; ) {
         printf("    DERT state: Requesting light measurement.");
+        /* Power-on mode -- only causes problems :(
+            // Put the sensor in power-on mode
+            bh1750_dat_tx = BH1750_PWR_ON;
+            bh1750_dat_err = i2c_write_blocking(&i2c1_inst, BH1750_ADDR, &bh1750_dat_tx, 1, false);
+            if (bh1750_dat_err == -1 || bh1750_dat_err == -2 || bh1750_dat_err == -3) {
+                printf("                Error %d powering on BH1750!", bh1750_dat_err);
+                gpio_put(GPIO_DB3, 1); // Debug bit 3 set to indicate I2C Error
+            }
+            else {
+                printf("                Powered on BH1750 with %d byte/s.", bh1750_dat_err);
+            }
+        */
+
         gpio_put(GPIO_DB1, 1); // Debug bit 1 set to indicate sending Opecode
-        gpio_put(GPIO_DB3, 0); // Debug bit 3 cleared to indicate no I2C Error (yet)
         bh1750_dat_tx = BH1750_MEAS_INST_1LX;
         bh1750_dat_err = i2c_write_blocking(&i2c1_inst, BH1750_ADDR, &bh1750_dat_tx, 1, false);
         if (bh1750_dat_err == -1 || bh1750_dat_err == -2 || bh1750_dat_err == -3) {
             printf("                Error %d writing to BH1750!", bh1750_dat_err);
             gpio_put(GPIO_DB3, 1); // Debug bit 3 set to indicate I2C Error
         }
-        else
+        else {
             printf("                Wrote %d byte to BH1750.", bh1750_dat_err);
+        }
         gpio_put(GPIO_DB1, 0); // Clear Opecode tx debug bit
 
         // Wait for the measurement to be complete
@@ -50,13 +63,17 @@ void vDertSenseLight(void *pvParameters) {
         }
         else {
             printf("                Read %d bytes from BH1750.", bh1750_dat_err);
-            printf("                Raw lux measurement: %d", bh1750_dat_rx);
+            printf("                Raw lux measurement: %x%x", bh1750_dat_rx[0], bh1750_dat_rx[1]);
         }
         gpio_put(GPIO_DB2, 0); // Clear data request debug bit
 
         // (Placeholder) Enable Low-Voltage Relays
         printf("                Controlling lights!");
         gpio_put(GPIO_HVR, 0);
+
+        // Debugging
+        gpio_put(GPIO_DB3, 0); // Debug bit 3 cleared to indicate no I2C Error (yet)
+        bh1750_dat_err = 0;    // Clear I2C error variable
 
         vTaskDelay( dertSENSE_LIGHT_TASK_PERIOD );
     }

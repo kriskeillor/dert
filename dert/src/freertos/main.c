@@ -31,12 +31,16 @@ int main() {
 
     // RP2040 MCU Initialization
     printf("    DERT state: Starting up!\n");
+
+    // I2C Initialization
     gpio_init(GPIO_I2C_SDA);
     gpio_init(GPIO_I2C_SCL);
-    i2c_init(i2c_default, 100*1000);
+    i2c_init(&i2c1_inst, 100*1000);
     gpio_set_function(GPIO_I2C_SDA, GPIO_FUNC_I2C);
     gpio_set_function(GPIO_I2C_SCL, GPIO_FUNC_I2C);
     bi_decl(bi_2pins_with_func(GPIO_I2C_SDA, GPIO_I2C_SCL, GPIO_FUNC_I2C));
+    gpio_pull_up(GPIO_I2C_SCL);
+    gpio_pull_up(GPIO_I2C_SDA);
 
     gpio_init(GPIO_LED0);
     gpio_init(GPIO_LED1);
@@ -62,6 +66,20 @@ int main() {
 
     // Wait for PuTTY to connect (USB-only)
     sleep_ms(5000);
+
+    // Debug
+    // Checking pullup status
+    bool scl_pulled_up = gpio_is_pulled_up(GPIO_I2C_SCL);
+    bool scl_pulled_down = gpio_is_pulled_down(GPIO_I2C_SCL);
+    bool sda_pulled_up = gpio_is_pulled_up(GPIO_I2C_SDA);
+    bool sda_pulled_down = gpio_is_pulled_down(GPIO_I2C_SDA);
+    printf("    SCL pulled up: %s; pulled down: %s.", scl_pulled_up ? "true" : "false", scl_pulled_down ? "true" : "false");
+    printf("    SDA pulled up: %s; pulled down: %s.", sda_pulled_up ? "true" : "false", sda_pulled_down ? "true" : "false");
+    
+    // Using offboard 3k pullup resistors
+    //gpio_disable_pulls(GPIO_I2C_SDA);
+    //gpio_disable_pulls(GPIO_I2C_SCL);
+
 
     // Indicate wait is finished, starting FreeRTOS
     gpio_put(GPIO_LED0, 0);
