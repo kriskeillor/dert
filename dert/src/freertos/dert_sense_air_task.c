@@ -16,6 +16,7 @@
 
 #include "dert_2040.h"
 #include "dert.h"
+#include "dert_sense_air_task.h"
 
 void vDertSenseAir(void *pvParameters) {
     uint8_t sht30_dat_tx;

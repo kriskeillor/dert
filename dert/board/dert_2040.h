@@ -19,11 +19,4 @@
 #define GPIO_DB2 23
 #define GPIO_DB3 24
 
-// SENSORS
-// Air Sensor
-#define SHT30_ADDR 0x44
-// Soil Sensors 1 & 2
-#define MOISTURE_SNS_1_ADDR 0x20
-#define MOISTURE_SNS_2_ADDR 0x21
-
 #endif

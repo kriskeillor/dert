@@ -13,6 +13,10 @@
         "dert_report_data_task.h": "c",
         "dert_sense_light_task.h": "c",
         "dert_2040.h": "c",
-        "binary_info.h": "c"
+        "dert_i2c.h": "c",
+        "binary_info.h": "c",
+        "multicore.h": "c",
+        "string.h": "c",
+        "types.h": "c"
     }
 }

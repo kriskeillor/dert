@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-// Air Sensor Address (preset)
+// Light Sensor Address (preset)
 #define BH1750_ADDR 0x23
 
 // Danger: These opecodes introduce unwanted behavior

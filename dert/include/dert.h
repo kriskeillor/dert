@@ -5,6 +5,10 @@
 /* FreeROTS "don't block" indicator */
 #define DONT_BLOCK                          ( 0UL )
 
+// Dert Config Definitions
+#define dertSNS_TIMEOUT_MS                  ( 100000 )
+#define dertVERBOSE_LOGS                    ( 0UL )
+
 /* Dert Task Definitions */
 #define dTASK_SIZE                          ( 8192 )
 

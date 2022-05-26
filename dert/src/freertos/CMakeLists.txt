@@ -12,7 +12,8 @@ if (TARGET tinyusb_device)
             dert_sense_air_task.c
             dert_sense_light_task.c
             dert_sense_soil_task.c
-            dert_report_data_task.c)
+            dert_report_data_task.c
+            dert_i2c.c)
 
     # enable usb output, disable uart output
     pico_enable_stdio_usb(main 1)
