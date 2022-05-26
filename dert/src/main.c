@@ -27,11 +27,11 @@
 #include "dert_report_data_task.h"
 
 int main() {
+	// Initialize serial interface
     stdio_init_all();
+    printf("DERT initializing...\n");
 
     // RP2040 MCU Initialization
-    printf("    DERT state: Starting up!\n");
-
     // I2C Initialization
     gpio_init(GPIO_I2C_SDA);
     gpio_init(GPIO_I2C_SCL);
@@ -42,11 +42,13 @@ int main() {
     gpio_pull_up(GPIO_I2C_SCL);
     gpio_pull_up(GPIO_I2C_SDA);
 
+	// Initialize indicator LED pins
     gpio_init(GPIO_LED0);
     gpio_init(GPIO_LED1);
     gpio_set_dir(GPIO_LED0, GPIO_OUT);
     gpio_set_dir(GPIO_LED1, GPIO_OUT);
 
+	// Initialize relay control pins
     gpio_init(GPIO_HVR);
     gpio_init(GPIO_LVR1);
     gpio_init(GPIO_LVR2);
@@ -54,6 +56,7 @@ int main() {
     gpio_set_dir(GPIO_LVR1, GPIO_OUT);
     gpio_set_dir(GPIO_LVR2, GPIO_OUT);
 
+	// Initialize debug bits 
     gpio_init(GPIO_DB1);
     gpio_init(GPIO_DB2);
     gpio_init(GPIO_DB3);
@@ -75,11 +78,6 @@ int main() {
     bool sda_pulled_down = gpio_is_pulled_down(GPIO_I2C_SDA);
     printf("    SCL pulled up: %s; pulled down: %s.", scl_pulled_up ? "true" : "false", scl_pulled_down ? "true" : "false");
     printf("    SDA pulled up: %s; pulled down: %s.", sda_pulled_up ? "true" : "false", sda_pulled_down ? "true" : "false");
-    
-    // Using offboard 3k pullup resistors
-    //gpio_disable_pulls(GPIO_I2C_SDA);
-    //gpio_disable_pulls(GPIO_I2C_SCL);
-
 
     // Indicate wait is finished, starting FreeRTOS
     gpio_put(GPIO_LED0, 0);
@@ -140,8 +138,9 @@ int main() {
         // error state
     }
 
+	// RTOS should never return from this call
     vTaskStartScheduler();
-
+	// If it did...
     printf("    vTaskScheduler lost control.");
     // Indicate error state
     gpio_put(GPIO_LED0, 1);

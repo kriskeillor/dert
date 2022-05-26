@@ -20,6 +20,12 @@
 #define BH1750_MEAS_INST_1LX 0x20
 #define BH1750_MEAS_INST_05LX 0x21
 #define BH1750_MEAS_INST_4LX 0x23
+// All measurements are 2 bytes in length
+#define BH1750_MEAS_LUX_LEN 2
+// Measurements can take up to 180ms to complete
+#define BH1750_MEAS_TIME 180
+
+static const char BH1750_NAME[] = "BH1750 Light Sensor";
 
 // FreeRTOS measurement task
 void vDertSenseLight(void *pvParameters);
