@@ -28,7 +28,9 @@
 #define CHIRP_SET_SLEEP 0x08
 #define CHIRP_SET_SLEEP_LEN 0
 
+// All Chirp I2C opecodes have length of one byte
 #define CHIRP_CMD_LEN 1
+#define CHIRP_MEAS_TIME 0
 
 static const char CHIRP_NAME[] = "Chirp Soil Sensor";
 

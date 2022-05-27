@@ -25,13 +25,15 @@ void vDertSenseSoil(void *pvParameters) {
     int moisture_sns_dat_err;
 
     for ( ;; ) {
-        printf("TASK:    Sense Soil!\n");
+        printf("\nDert task: Sensing Soil.\n");
 
         // Sensor 2
         // Soil Capacitance Reading
         moisture_sns_dat_tx = CHIRP_GET_CAP;
         moisture_sns_dat_err = dert_i2c_sns_wr(MOISTURE_SNS_2_ADDR,
             &moisture_sns_dat_tx,
+            CHIRP_CMD_LEN,
+            CHIRP_MEAS_TIME,
             &moisture_sns_dat_rx[0],
             CHIRP_GET_CAP_LEN,
             dertSNS_TIMEOUT_MS,
@@ -46,6 +48,8 @@ void vDertSenseSoil(void *pvParameters) {
         moisture_sns_dat_tx = CHIRP_GET_TEMP;
         moisture_sns_dat_err = dert_i2c_sns_wr(MOISTURE_SNS_2_ADDR,
             &moisture_sns_dat_tx,
+            CHIRP_CMD_LEN,
+            CHIRP_MEAS_TIME,
             &moisture_sns_dat_rx[0],
             CHIRP_GET_TEMP_LEN,
             dertSNS_TIMEOUT_MS,
@@ -55,11 +59,6 @@ void vDertSenseSoil(void *pvParameters) {
             printf("Read 0x%x%x temperature from %s.\n", moisture_sns_dat_rx[0], moisture_sns_dat_rx[1], CHIRP_NAME);
         else
             printf("Error: Read 0 bytes from %s.\n", CHIRP_NAME); 
-
-        // (Placeholder) Enable Low-Voltage Relays
-        printf("Controlling pumps!\n");
-        gpio_put(GPIO_LVR1, 0);
-        gpio_put(GPIO_LVR2, 0);
 
         vTaskDelay( dertSENSE_SOIL_TASK_PERIOD );
     }

@@ -25,6 +25,9 @@
 // Measurements can take up to 180ms to complete
 #define BH1750_MEAS_TIME 180
 
+// All BH1750 I2C opecodes have length of one byte
+#define BH1750_CMD_LEN 1
+
 static const char BH1750_NAME[] = "BH1750 Light Sensor";
 
 // FreeRTOS measurement task

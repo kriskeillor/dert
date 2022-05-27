@@ -70,15 +70,6 @@ int main() {
     // Wait for PuTTY to connect (USB-only)
     sleep_ms(5000);
 
-    // Debug
-    // Checking pullup status
-    bool scl_pulled_up = gpio_is_pulled_up(GPIO_I2C_SCL);
-    bool scl_pulled_down = gpio_is_pulled_down(GPIO_I2C_SCL);
-    bool sda_pulled_up = gpio_is_pulled_up(GPIO_I2C_SDA);
-    bool sda_pulled_down = gpio_is_pulled_down(GPIO_I2C_SDA);
-    printf("    SCL pulled up: %s; pulled down: %s.", scl_pulled_up ? "true" : "false", scl_pulled_down ? "true" : "false");
-    printf("    SDA pulled up: %s; pulled down: %s.", sda_pulled_up ? "true" : "false", sda_pulled_down ? "true" : "false");
-
     // Indicate wait is finished, starting FreeRTOS
     gpio_put(GPIO_LED0, 0);
     gpio_put(GPIO_LED1, 1);
