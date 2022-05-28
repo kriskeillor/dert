@@ -25,6 +25,7 @@
 #include "dert_sense_light_task.h"
 #include "dert_sense_soil_task.h"
 #include "dert_report_data_task.h"
+#include "dert_toggle_relays_task_test.h"
 
 int main() {
 	// Initialize serial interface
@@ -81,17 +82,22 @@ int main() {
     TaskHandle_t xSoilHandle = NULL;
     TaskHandle_t xReportHandle = NULL;
 
+    // Relay debugging
+    TaskHandle_t xRelayHandle = NULL;
+
     // Create dert_sense_air_task
     xTaskCreateRet = xTaskCreate(
                         vDertSenseAir,
                         "SENSE_AIR",
                         dTASK_SIZE,
-                        NULL, //(void * ) 0,
+                        (void * ) 0,
                         dertSENSE_AIR_TASK_PRIORITY,
                         &xAirHandle);
     if (xTaskCreateRet != pdPASS) {
-        // error state
-    }
+        printf("! Error creating task vDertSenseAir.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("Created task vDertSenseAir.\n");
+    } else { }
 
     // Create dert_sense_air_task
     xTaskCreateRet = xTaskCreate(
@@ -102,8 +108,10 @@ int main() {
                         dertSENSE_LIGHT_TASK_PRIORITY,
                         &xLightHandle);
     if (xTaskCreateRet != pdPASS) {
-        // error state
-    }
+        printf("! Error creating task vDertSenseLight.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("Created task vDertSenseLight.\n");
+    } else { }
 
     // Create dert_sense_,soil_task
     xTaskCreateRet = xTaskCreate(
@@ -114,8 +122,10 @@ int main() {
                         dertSENSE_SOIL_TASK_PRIORITY,
                         &xSoilHandle);
     if (xTaskCreateRet != pdPASS) {
-        // error state
-    }
+        printf("! Error creating task vDertSenseSoil.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("Created task vDertSenseSoil.\n");
+    } else { }
 
     // Create dert_report_data_task
     xTaskCreateRet = xTaskCreate(
@@ -126,13 +136,33 @@ int main() {
                         dertREPORT_DATA_TASK_PRIORITY,
                         &xReportHandle);
     if (xTaskCreateRet == pdPASS) {
-        // error state
+        printf("! Error creating task vDertReportData.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("Created task vDertReportData.\n");
+    } else { }
+
+    // Create dert_toggle_relays_task
+    xTaskCreateRet = xTaskCreate(
+                        vDertToggleRelays,
+                        "TOGGLE_RELAYS_TEST",
+                        dTASK_SIZE,
+                        (void * ) 0,
+                        dertTOGGLE_RELAYS_TASK_PRIORITY,
+                        &xRelayHandle);
+    if (xTaskCreateRet == pdPASS) {
+        printf("! Error creating task vDertToggleRelays.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("Created task vDertToggleRelays.\n");
+    } else { }
+
+    if (dertVERBOSE_LOGS) {
+        printf("\nDert initialization completed.\n");
     }
 
 	// RTOS should never return from this call
     vTaskStartScheduler();
 	// If it did...
-    printf("    vTaskScheduler lost control.");
+    printf("! Error: vTaskScheduler lost control.");
     // Indicate error state
     gpio_put(GPIO_LED0, 1);
 }

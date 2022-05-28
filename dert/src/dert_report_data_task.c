@@ -18,9 +18,11 @@
 #include "dert.h"
 
 void vDertReportData(void *pvParameters) {
+    uint32_t lifeCntr = 0;
+
     for ( ;; ) {
-        printf("    DERT state: Reporting data!");
-        printf("                Reporting errors!");
+        lifeCntr += 1;
+        printf("DERT task: Reporting data. %d reports.", lifeCntr);
 
         vTaskDelay( dertREPORT_DATA_TASK_PERIOD );
     }

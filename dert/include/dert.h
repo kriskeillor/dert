@@ -7,7 +7,7 @@
 
 // Dert Config Definitions
 #define dertSNS_TIMEOUT_MS                  ( 100000 )
-#define dertVERBOSE_LOGS                    ( 0UL )
+#define dertVERBOSE_LOGS                    ( 1UL )
 
 /* Dert Task Definitions */
 #define dTASK_SIZE                          ( 8192 )
@@ -23,6 +23,10 @@
 #define dertSENSE_SOIL_TASK_PERIOD          pdMS_TO_TICKS( 10000UL )
 #define dertSENSE_LIGHT_TASK_PERIOD         pdMS_TO_TICKS( 10000UL )
 #define dertSENSE_AIR_TASK_PERIOD           pdMS_TO_TICKS( 10000UL )
+
+/* Priority/period for relay toggle test. */
+#define dertTOGGLE_RELAYS_TASK_PRIORITY     (tskIDLE_PRIORITY + 1UL)
+#define dertTOGGLE_RELAYS_TASK_PERIOD       pdMS_TO_TICKS( 10000UL )
 
 /* TODO: Refactor I2C */ 
 bool i2c_res_addr(uint8_t addr);

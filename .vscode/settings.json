@@ -12,6 +12,7 @@
         "dert_sense_soil_task.h": "c",
         "dert_report_data_task.h": "c",
         "dert_sense_light_task.h": "c",
+        "dert_toggle_relays_task_test.h": "c",
         "dert_2040.h": "c",
         "dert_i2c.h": "c",
         "binary_info.h": "c",
