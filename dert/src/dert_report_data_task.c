@@ -22,7 +22,7 @@ void vDertReportData(void *pvParameters) {
 
     for ( ;; ) {
         lifeCntr += 1;
-        printf("DERT task: Reporting data. %d reports.", lifeCntr);
+        printf("\nDERT task: Reporting data. %d reports.\n", lifeCntr);
 
         vTaskDelay( dertREPORT_DATA_TASK_PERIOD );
     }

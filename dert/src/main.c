@@ -93,10 +93,16 @@ int main() {
                         (void * ) 0,
                         dertSENSE_AIR_TASK_PRIORITY,
                         &xAirHandle);
+    // Debug Output (two checks)
     if (xTaskCreateRet != pdPASS) {
         printf("! Error creating task vDertSenseAir.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertSenseAir.\n");
+    } else { }
+    if (xAirHandle == NULL) {
+        printf("! Error: xReportHandle null.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("xReportHandle not null.\n");
     } else { }
 
     // Create dert_sense_air_task
@@ -107,10 +113,16 @@ int main() {
                         (void * ) 0,
                         dertSENSE_LIGHT_TASK_PRIORITY,
                         &xLightHandle);
+    // Debug Output (two checks)
     if (xTaskCreateRet != pdPASS) {
         printf("! Error creating task vDertSenseLight.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertSenseLight.\n");
+    } else { }
+    if (xLightHandle == NULL) {
+        printf("! Error: xReportHandle null.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("xReportHandle not null.\n");
     } else { }
 
     // Create dert_sense_,soil_task
@@ -121,10 +133,16 @@ int main() {
                         (void * ) 0,
                         dertSENSE_SOIL_TASK_PRIORITY,
                         &xSoilHandle);
+    // Debug Output (two checks)
     if (xTaskCreateRet != pdPASS) {
         printf("! Error creating task vDertSenseSoil.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertSenseSoil.\n");
+    } else { }
+    if (xSoilHandle == NULL) {
+        printf("! Error: xReportHandle null.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("xReportHandle not null.\n");
     } else { }
 
     // Create dert_report_data_task
@@ -135,10 +153,16 @@ int main() {
                         (void * ) 0,
                         dertREPORT_DATA_TASK_PRIORITY,
                         &xReportHandle);
+    // Debug Output (two checks)
     if (xTaskCreateRet == pdPASS) {
         printf("! Error creating task vDertReportData.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertReportData.\n");
+    } else { }
+    if (xReportHandle == NULL) {
+        printf("! Error: xReportHandle null.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("xReportHandle not null.\n");
     } else { }
 
     // Create dert_toggle_relays_task
@@ -149,10 +173,16 @@ int main() {
                         (void * ) 0,
                         dertTOGGLE_RELAYS_TASK_PRIORITY,
                         &xRelayHandle);
+    // Debug Output (two checks)
     if (xTaskCreateRet == pdPASS) {
         printf("! Error creating task vDertToggleRelays.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertToggleRelays.\n");
+    } else { }
+    if (xRelayHandle == NULL) {
+        printf("! Error: xReportHandle null.\n");
+    } else if (dertVERBOSE_LOGS) {
+        printf("xReportHandle not null.\n");
     } else { }
 
     if (dertVERBOSE_LOGS) {
