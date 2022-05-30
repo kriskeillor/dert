@@ -5,6 +5,10 @@
 #define GPIO_I2C_SDA 10
 #define GPIO_I2C_SCL 11
 
+// UART Bus
+#define UART_TX 12
+#define UART_RX 13
+
 // Status indicator GPIOs
 #define GPIO_LED0 14
 #define GPIO_LED1 15

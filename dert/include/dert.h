@@ -5,6 +5,10 @@
 /* FreeROTS "don't block" indicator */
 #define DONT_BLOCK                          ( 0UL )
 
+// RP-2040 Definitions
+#define UART_ID                             ( uart0 )
+#define UART_BAUD_RATE                      ( 115200 )
+
 // Dert Config Definitions
 #define dertSNS_TIMEOUT_MS                  ( 100000 )
 #define dertVERBOSE_LOGS                    ( 1UL )

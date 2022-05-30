@@ -18,6 +18,8 @@
 #include "hardware/gpio.h"
 #include "hardware/i2c.h"
 
+#include "hardware/uart.h"
+
 /* Dert includes */
 #include "dert_2040.h"
 #include "dert.h"
@@ -42,6 +44,11 @@ int main() {
     bi_decl(bi_2pins_with_func(GPIO_I2C_SDA, GPIO_I2C_SCL, GPIO_FUNC_I2C));
     gpio_pull_up(GPIO_I2C_SCL);
     gpio_pull_up(GPIO_I2C_SDA);
+
+    // UART Initialization
+    uart_init(UART_ID, UART_BAUD_RATE);
+    gpio_set_function(UART_TX, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX, GPIO_FUNC_UART);
 
 	// Initialize indicator LED pins
     gpio_init(GPIO_LED0);
