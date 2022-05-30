@@ -1,0 +1,124 @@
+Created task vDertSenseAir.
+xReportHandle not null.
+Created task vDertSenseLight.
+xReportHandle not null.
+Created task vDertSenseSoil.
+xReportHandle not null.
+Created task vDertReportData.
+xReportHandle not null.
+Created task vDertToggleRelays.
+xReportHandle not null.
+
+Dert initialization completed.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 1 reports.
+
+Dert task: Sensing Soil.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+
+DERT task: Sensing light.
+! Error -2 writing to BH1750 Light Sensor.
+! Due to write error, read not attempted.
+! Error: Read 0 bytes from BH1750 Light Sensor.
+
+DERT task: Sensing air.
+! Error -2 writing to SHT30 Air Sensor.
+! Due to write error, read not attempted.
+! Error -2 from SHT30 Air Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 2 reports.
+
+Dert task: Sensing Soil.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+
+DERT task: Sensing light.
+! Error -2 writing to BH1750 Light Sensor.
+! Due to write error, read not attempted.
+! Error: Read 0 bytes from BH1750 Light Sensor.
+
+DERT task: Sensing air.
+! Error -2 writing to SHT30 Air Sensor.
+! Due to write error, read not attempted.
+! Error -2 from SHT30 Air Sensor.
+Created task vDertSenseAir.
+xReportHandle not null.
+Created task vDertSenseLight.
+xReportHandle not null.
+Created task vDertSenseSoil.
+xReportHandle not null.
+Created task vDertReportData.
+xReportHandle not null.
+Created task vDertToggleRelays.
+xReportHandle not null.
+
+Dert initialization completed.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 1 reports.
+
+Dert task: Sensing Soil.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+
+DERT task: Sensing light.
+! Error -2 writing to BH1750 Light Sensor.
+! Due to write error, read not attempted.
+! Error: Read 0 bytes from BH1750 Light Sensor.
+
+DERT task: Sensing air.
+! Error -2 writing to SHT30 Air Sensor.
+! Due to write error, read not attempted.
+! Error -2 from SHT30 Air Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 2 reports.
+
+Dert task: Sensing Soil.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+! Error -2 writing to Chirp Soil Sensor.
+! Due to write error, read not attempted.
+Error: Read 0 bytes from Chirp Soil Sensor.
+
+DERT task: Sensing light.
+! Error -2 writing to BH1750 Light Sensor.
+! Due to write error, read not attempted.
+! Error: Read 0 bytes from BH1750 Light Sensor.
+
+DERT task: Sensing air.
+! Error -2 writing to SHT30 Air Sensor.
+! Due to write error, read not attempted.
+! Error -2 from SHT30 Air Sensor.
