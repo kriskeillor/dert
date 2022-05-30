@@ -154,7 +154,7 @@ int main() {
                         dertREPORT_DATA_TASK_PRIORITY,
                         &xReportHandle);
     // Debug Output (two checks)
-    if (xTaskCreateRet == pdPASS) {
+    if (xTaskCreateRet != pdPASS) {
         printf("! Error creating task vDertReportData.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertReportData.\n");
@@ -174,7 +174,7 @@ int main() {
                         dertTOGGLE_RELAYS_TASK_PRIORITY,
                         &xRelayHandle);
     // Debug Output (two checks)
-    if (xTaskCreateRet == pdPASS) {
+    if (xTaskCreateRet != pdPASS) {
         printf("! Error creating task vDertToggleRelays.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertToggleRelays.\n");
