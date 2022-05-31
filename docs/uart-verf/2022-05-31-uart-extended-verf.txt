@@ -1,0 +1,2023 @@
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4384 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7df Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4385 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x7ced Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4386 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f3 Temperature from SHT30 Air Sensor.
+Read 0x7d38 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4387 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7d2d Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4388 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x7d2f Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4389 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7d1d Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4390 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f3 Temperature from SHT30 Air Sensor.
+Read 0x7d32 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4391 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7cf1 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4392 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f3 Temperature from SHT30 Air Sensor.
+Read 0x7d2a Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4393 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x7d9 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4394 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x7db Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4395 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7cf1 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4396 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7d2d Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4397 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1d capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7cff Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4398 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7ccd Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4399 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f3 Temperature from SHT30 Air Sensor.
+Read 0x7dc Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4400 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x7d35 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4401 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1d capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f3 Temperature from SHT30 Air Sensor.
+Read 0x7cc3 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4402 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7cf9 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4403 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x63d Temperature from SHT30 Air Sensor.
+Read 0x7cfd Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4404 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x7cfc Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4405 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7cff Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4406 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7cdb Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4407 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7cd5 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4408 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7ce2 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4409 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x7cd6 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4410 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x63d Temperature from SHT30 Air Sensor.
+Read 0x7cdf Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4411 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x7cde Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x028 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4412 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7cea Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x03c lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4413 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x7cff Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08c lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4414 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62e8 Temperature from SHT30 Air Sensor.
+Read 0x7db Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x082 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4415 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x7cc6 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08b lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4416 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x7d3 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x082 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4417 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1c capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7d8 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x082 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4418 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1e capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7d51 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x089 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4419 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1e capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x7dfb Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x089 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4420 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1e capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x804d Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x086 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4421 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1d capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62f8 Temperature from SHT30 Air Sensor.
+Read 0x81c7 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x085 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4422 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1e capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x84a6 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x089 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4423 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1e capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x63d Temperature from SHT30 Air Sensor.
+Read 0x848e Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08d lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4424 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1e capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f0 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x843b Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08d lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4425 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1d capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x633 Temperature from SHT30 Air Sensor.
+Read 0x8417 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x068 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4426 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1d capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x63d Temperature from SHT30 Air Sensor.
+Read 0x83c8 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x06f lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4427 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x1d capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x8344 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08b lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4428 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x117 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6312 Temperature from SHT30 Air Sensor.
+Read 0x8371 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08a lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4429 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x83a2 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x07d lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4430 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6312 Temperature from SHT30 Air Sensor.
+Read 0x83ad Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x086 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4431 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6312 Temperature from SHT30 Air Sensor.
+Read 0x839e Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x081 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4432 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x63d Temperature from SHT30 Air Sensor.
+Read 0x8311 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x088 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4433 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x62fd Temperature from SHT30 Air Sensor.
+Read 0x82d9 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x082 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4434 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x63d Temperature from SHT30 Air Sensor.
+Read 0x83b3 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x07f lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4435 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6312 Temperature from SHT30 Air Sensor.
+Read 0x8422 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x080 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4436 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x63d Temperature from SHT30 Air Sensor.
+Read 0x8429 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x092 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4437 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x844c Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08d lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4438 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x638 Temperature from SHT30 Air Sensor.
+Read 0x843d Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x085 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4439 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6312 Temperature from SHT30 Air Sensor.
+Read 0x845 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x06f lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4440 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x631d Temperature from SHT30 Air Sensor.
+Read 0x83e3 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x072 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4441 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6318 Temperature from SHT30 Air Sensor.
+Read 0x83e1 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x059 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4442 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x83fb Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x058 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4443 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6312 Temperature from SHT30 Air Sensor.
+Read 0x83da Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x057 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4444 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x631d Temperature from SHT30 Air Sensor.
+Read 0x83c5 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x05b lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4445 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x836e Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x075 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4446 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x631d Temperature from SHT30 Air Sensor.
+Read 0x8339 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x089 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4447 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x82f9 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x089 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4448 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x82db Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08d lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4449 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x8282 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x085 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4450 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x8291 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x083 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4451 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6318 Temperature from SHT30 Air Sensor.
+Read 0x8245 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08c lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4452 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6333 Temperature from SHT30 Air Sensor.
+Read 0x81fa Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x07b lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4453 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x8197 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x092 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4454 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x8146 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x093 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4455 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x632d Temperature from SHT30 Air Sensor.
+Read 0x812b Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08e lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4456 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x631d Temperature from SHT30 Air Sensor.
+Read 0x80dd Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4457 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6318 Temperature from SHT30 Air Sensor.
+Read 0x80b0 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08f lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4458 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x632d Temperature from SHT30 Air Sensor.
+Read 0x80ae Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x090 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4459 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x11a capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6322 Temperature from SHT30 Air Sensor.
+Read 0x8053 Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x092 lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 0, state: 0
+LVR1 GPIO output: 0, state: 0
+LVR2 GPIO output: 0, state: 0
+
+DERT task: Reporting data. 4460 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x632d Temperature from SHT30 Air Sensor.
+Read 0x801a Relative Humidity from SHT30 Air Sensor.
+
+DERT task: Sensing light.
+Wrote 1B to BH1750 Light Sensor.
+Read 2B from BH1750 Light Sensor.
+Read 0x08f lux from BH1750 Light Sensor.
+
+Dert task: Toggling relays (test).
+HVR GPIO output: 1, state: 1
+LVR1 GPIO output: 1, state: 1
+LVR2 GPIO output: 1, state: 1
+
+DERT task: Reporting data. 4461 reports.
+
+Dert task: Sensing Soil.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x119 capacitance from Chirp Soil Sensor.
+Wrote 1B to Chirp Soil Sensor.
+Read 2B from Chirp Soil Sensor.
+Read 0x0f2 temperature from Chirp Soil Sensor.
+
+DERT task: Sensing air.
+Wrote 2B to SHT30 Air Sensor.
+Read 6B from SHT30 Air Sensor.
+Read 0x6328 Temperature from SHT30 Air Sensor.
+Read 0x8011 Relative Humidity from SHT30 Air Sensor.
+

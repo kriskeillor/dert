@@ -22,7 +22,9 @@ The DERT device shall be connected to a UART-enabled computer through it's seria
 - Computer equipped with COM-capable USB port
 
 **Verification Evidence**:
-The file "[2022-05-29-uart-verf.txt](2022-05-29-uart-verf.txt)" demonstrates successful output over UART. All sensors were disconnected at the time of the test, which is why there are errors reported. However, the text shows two successful startup sequences and several task executions, demonstrating that the DERT device can communicate over the same UART channel across multiple power cycles.
+The file "[2022-05-29-uart-restart-verf.txt](2022-05-29-uart-restart-verf.txt)" demonstrates successful output over UART. All sensors were disconnected at the time of the test, which is why there are errors reported. However, the text shows two successful startup sequences and several task executions, demonstrating that the DERT device can communicate over the same UART channel across multiple power cycles.
+
+The file "[2022-05-31-uart-extended-verf.txt](2022-05-31-uart-extended-verf.txt)" demonstrates successful long-term output over UART. All sensors were connected for the duration of the test, hence there are no errors reported. The earlier reports are cut off, but the final report number - 4461 - indicates that, at the ten-second reporting period, the device functioned successfully for over twelve and a half hours.
 
 **Verification Result**:  
 0 - Verification process was not completed.  
