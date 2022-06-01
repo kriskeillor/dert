@@ -6,6 +6,8 @@
 
 // Air Sensor Address
 #define SHT30_ADDR 0x44
+// Returned Data Size (bytes)
+#define BH1750_DAT_RX_SZ 6
 
 // Command opecodes
 // Clock stretched read (MSB)
@@ -21,6 +23,15 @@
 
 // Time to wait between commands in ms
 #define SHT30_MEAS_TIME 1
+
+// Constants used to calculate Relative Humidity (RH)
+#define BH1750_RH_SCALE 625
+#define BH1750_RH_SHIFT 12
+
+// Constants used to calculate Temperature (T)
+#define BH1750_T_SCALE 4375
+#define BH1750_T_SHIFT 14
+#define BH1750_T_OFFSET 4500
 
 static const char SHT30_NAME[] = "SHT30 Air Sensor";
 
