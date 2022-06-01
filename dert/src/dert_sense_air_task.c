@@ -24,9 +24,9 @@ void vDertSenseAir(void *pvParameters) {
     uint8_t air_sns_dat_tx[SHT30_GET_DATA_PAIR_CMD_LEN];
     uint8_t air_sns_dat_rx[BH1750_DAT_RX_SZ];
     int8_t air_sns_dat_err;
-    uint16_t air_sns_humidity;
+    uint32_t air_sns_humidity;
     float_t air_sns_humidity_f;
-    uint16_t air_sns_temp;
+    int32_t air_sns_temp;
     float_t air_sns_temp_f;
 
     // Set opecode to request one time, medium repeatability, clock-stretching measurement 
@@ -50,13 +50,23 @@ void vDertSenseAir(void *pvParameters) {
         if (air_sns_dat_err == BH1750_DAT_RX_SZ) {
             // Calculate humidity and print to serial output
             // First, combine raw data into one variable
-            air_sns_humidity = ((air_sns_dat_rx[0] << 2) & 0xFF00) | air_sns_dat_rx[1];
+            air_sns_humidity = ((air_sns_dat_rx[0] << 8) & 0xFF00) | air_sns_dat_rx[1];
             // Then, scale and shift
             air_sns_humidity = ((BH1750_RH_SCALE * air_sns_humidity) >> BH1750_RH_SHIFT);
             // Finally, convert to decimal
             air_sns_humidity_f = (float_t)air_sns_humidity / 100.0f;
             // Print
             printf("+ Air RH: %f\n", air_sns_humidity_f);
+
+            // Calculate temperature (in Farenheit) and print to serial output
+            // First, combine data
+            air_sns_temp = ((air_sns_dat_rx[3] << 8) & 0xFF00) | air_sns_dat_rx[4];
+            // Then scale, shift, and subtract
+            air_sns_temp = ((BH1750_T_SCALE * air_sns_temp) >> BH1750_T_SHIFT) - BH1750_T_OFFSET;
+            // Convert to decimal
+            air_sns_temp_f = (float_t) air_sns_temp / 100.0f;
+            // Print
+            printf("+ Air Temp: %f\n", air_sns_temp_f);
 
             // Detailed logging (raw readings)
             if (dertVERBOSE_LOGS) {
