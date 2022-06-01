@@ -21,8 +21,10 @@ void vDertReportData(void *pvParameters) {
     uint32_t lifeCntr = 0;
 
     for ( ;; ) {
-        lifeCntr += 1;
-        printf("\nDERT task: Reporting data. %d reports.\n", lifeCntr);
+        if (dertVERBOSE_LOGS) {
+            lifeCntr += 1;
+            printf("\nDERT task: Reporting data. %d reports.\n", lifeCntr);
+        }
 
         vTaskDelay( dertREPORT_DATA_TASK_PERIOD );
     }

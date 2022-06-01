@@ -24,7 +24,9 @@ void vDertToggleRelays(void *pvParameters) {
     bool lvr2_en = false;
 
     for ( ;; ) {
-        printf("\nDert task: Toggling relays (test).\n");
+        if (dertVERBOSE_LOGS) {
+            printf("\nDert task: Toggling relays (test).\n");
+        } else { }
 
         hvr_en = !hvr_en;
         gpio_put(GPIO_HVR, hvr_en);
@@ -35,9 +37,11 @@ void vDertToggleRelays(void *pvParameters) {
         gpio_put(GPIO_LVR2, lvr2_en);
 
         // Debug output
-        printf("HVR GPIO output: %d, state: %d\n", hvr_en, gpio_get(GPIO_HVR));
-        printf("LVR1 GPIO output: %d, state: %d\n", lvr1_en, gpio_get(GPIO_LVR1));
-        printf("LVR2 GPIO output: %d, state: %d\n", lvr2_en, gpio_get(GPIO_LVR2));
+        if (dertVERBOSE_LOGS) {
+            printf("HVR GPIO output: %d, state: %d\n", hvr_en, gpio_get(GPIO_HVR));
+            printf("LVR1 GPIO output: %d, state: %d\n", lvr1_en, gpio_get(GPIO_LVR1));
+            printf("LVR2 GPIO output: %d, state: %d\n", lvr2_en, gpio_get(GPIO_LVR2));
+        }
 
         vTaskDelay( dertTOGGLE_RELAYS_TASK_PERIOD );
     }
