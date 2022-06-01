@@ -11,7 +11,7 @@
 
 // Dert Config Definitions
 #define dertSNS_TIMEOUT_MS                  ( 100000 )
-#define dertVERBOSE_LOGS                    ( 1UL )
+#define dertVERBOSE_LOGS                    ( 0UL )
 
 /* Dert Task Definitions */
 #define dTASK_SIZE                          ( 4096 )

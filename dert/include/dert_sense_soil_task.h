@@ -8,6 +8,10 @@
 #define MOISTURE_SNS_1_ADDR 0x20
 #define MOISTURE_SNS_2_ADDR 0x21
 
+// Data Calculation
+#define CHIRP_MIN_MOIST 250
+#define CHIRP_MAX_MOIST 500
+
 // Read opecodes
 #define CHIRP_GET_CAP 0x00
 #define CHIRP_GET_CAP_LEN 2
