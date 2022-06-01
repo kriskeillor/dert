@@ -21,11 +21,14 @@
 
 void vDertSenseLight(void *pvParameters) {
     uint8_t light_sns_dat_tx;
-    uint8_t light_sns_dat_rx[2];
+    uint8_t light_sns_dat_rx[BH1750_DAT_SZ];
     int8_t light_sns_dat_err;
+    uint16_t light_sns_lux;
 
     for ( ;; ) {
-        printf("\nDERT task: Sensing light.\n");
+        if (dertVERBOSE_LOGS) {
+             printf("\nDERT task: Sensing light.\n");
+        }
 
         // Lux reading
         light_sns_dat_tx = BH1750_MEAS_INST_1LX;
@@ -38,11 +41,22 @@ void vDertSenseLight(void *pvParameters) {
 			dertSNS_TIMEOUT_MS,
 			(char *)BH1750_NAME);
 
-		if (light_sns_dat_err > 0)
-			printf("Read 0x%x%x lux from %s.\n", light_sns_dat_rx[0], light_sns_dat_rx[1], BH1750_NAME);
-		else 
-			printf("! Error: Read 0 bytes from %s.\n", BH1750_NAME);
+        // Data/Error Logging
+		if (light_sns_dat_err > 0) {
+            // Calculate lux and print to serial output
+            light_sns_lux = (((light_sns_dat_rx[0] << 2) & 0xFF00) | light_sns_dat_rx[1]) / BH1750_DIV_FACTOR;
+            printf("+ Lux: %d\n", light_sns_lux);
 
+            // Detailed logging (raw readings)
+            if (dertVERBOSE_LOGS) {
+			    printf("Read 0x%x%x lux from %s.\n", light_sns_dat_rx[0], light_sns_dat_rx[1], BH1750_NAME);
+            } else { }
+        }
+		else {
+			printf("! Error: Read 0 bytes from %s.\n", BH1750_NAME);
+        }
+
+        // Delay task
         vTaskDelay( dertSENSE_LIGHT_TASK_PERIOD );
     }
 }

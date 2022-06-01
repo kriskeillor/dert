@@ -36,6 +36,7 @@ int dert_i2c_sns_wr(uint8_t addr,
     // Give device time to respond
     if (pause_ms > 0)
         sleep_ms(pause_ms);
+    else { }
 
     // If no error, read result from I2C Bus
     if (sns_dat_err >= PICO_ERROR_NONE) {
