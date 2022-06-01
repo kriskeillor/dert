@@ -44,7 +44,7 @@ void vDertSenseLight(void *pvParameters) {
         // Data/Error Logging
 		if (light_sns_dat_err > 0) {
             // Calculate lux and print to serial output
-            light_sns_lux = (((light_sns_dat_rx[0] << 2) & 0xFF00) | light_sns_dat_rx[1]) / BH1750_DIV_FACTOR;
+            light_sns_lux = (((light_sns_dat_rx[0] << BH1750_SHIFT) & 0xFF00) | light_sns_dat_rx[1]) / BH1750_DIV_FACTOR;
             printf("+ Lux: %d\n", light_sns_lux);
 
             // Detailed logging (raw readings)

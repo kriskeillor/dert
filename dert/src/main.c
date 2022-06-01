@@ -32,7 +32,6 @@
 int main() {
 	// Initialize serial interface
     stdio_init_all();
-    printf("DERT initializing...\n");
 
     // RP2040 MCU Initialization
     // I2C Initialization
@@ -72,15 +71,13 @@ int main() {
     gpio_set_dir(GPIO_DB2, GPIO_OUT);
     gpio_set_dir(GPIO_DB3, GPIO_OUT);
 
-    // Indicate startup is finished, waiting 5s for PuTTY connection
+    // Indicate RP2040 init is complete
+    if (dertVERBOSE_LOGS) {
+        printf("\nRP-2040 initialization completed.\n");
+    }
     gpio_put(GPIO_LED0, 1);
-
-    // Wait for PuTTY to connect (USB-only)
-    sleep_ms(5000);
-
-    // Indicate wait is finished, starting FreeRTOS
+    sleep_ms(500);
     gpio_put(GPIO_LED0, 0);
-    gpio_put(GPIO_LED1, 1);
 
     // Variables for creating tasks
     BaseType_t xTaskCreateRet;
@@ -106,11 +103,6 @@ int main() {
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertSenseAir.\n");
     } else { }
-    if (xAirHandle == NULL) {
-        printf("! Error: xReportHandle null.\n");
-    } else if (dertVERBOSE_LOGS) {
-        printf("xReportHandle not null.\n");
-    } else { }
 
     // Create dert_sense_air_task
     xTaskCreateRet = xTaskCreate(
@@ -125,11 +117,6 @@ int main() {
         printf("! Error creating task vDertSenseLight.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertSenseLight.\n");
-    } else { }
-    if (xLightHandle == NULL) {
-        printf("! Error: xReportHandle null.\n");
-    } else if (dertVERBOSE_LOGS) {
-        printf("xReportHandle not null.\n");
     } else { }
 
     // Create dert_sense_,soil_task
@@ -146,11 +133,6 @@ int main() {
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertSenseSoil.\n");
     } else { }
-    if (xSoilHandle == NULL) {
-        printf("! Error: xReportHandle null.\n");
-    } else if (dertVERBOSE_LOGS) {
-        printf("xReportHandle not null.\n");
-    } else { }
 
     // Create dert_report_data_task
     xTaskCreateRet = xTaskCreate(
@@ -165,11 +147,6 @@ int main() {
         printf("! Error creating task vDertReportData.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertReportData.\n");
-    } else { }
-    if (xReportHandle == NULL) {
-        printf("! Error: xReportHandle null.\n");
-    } else if (dertVERBOSE_LOGS) {
-        printf("xReportHandle not null.\n");
     } else { }
 
     // Create dert_toggle_relays_task
@@ -186,20 +163,23 @@ int main() {
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertToggleRelays.\n");
     } else { }
-    if (xRelayHandle == NULL) {
-        printf("! Error: xReportHandle null.\n");
-    } else if (dertVERBOSE_LOGS) {
-        printf("xReportHandle not null.\n");
-    } else { }
 
+    // Indicate FreeRTOS init is complete
     if (dertVERBOSE_LOGS) {
         printf("\nDert initialization completed.\n");
     }
+    gpio_put(GPIO_LED0, 1);
+    sleep_ms(500);
+    gpio_put(GPIO_LED0, 0);
 
 	// RTOS should never return from this call
     vTaskStartScheduler();
+
 	// If it did...
-    printf("! Error: vTaskScheduler lost control.");
-    // Indicate error state
-    gpio_put(GPIO_LED0, 1);
+    for ( ;; ) {
+        printf("! Error: vTaskScheduler lost control.");
+        gpio_put(GPIO_LED0, 1);
+        sleep_ms(500);
+        gpio_put(GPIO_LED0, 0);
+    }
 }

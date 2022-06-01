@@ -10,6 +10,7 @@
 #define BH1750_DAT_SZ 2
 // Value to divide measured values by
 #define BH1750_DIV_FACTOR 1.2
+#define BH1750_SHIFT 8
 
 // Danger: These opecodes introduce unwanted behavior
 #define BH1750_PWR_OFF 0x00
