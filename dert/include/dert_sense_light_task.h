@@ -6,6 +6,8 @@
 
 // Light Sensor Address (preset)
 #define BH1750_ADDR 0x23
+// Returned Data Size (bytes)
+#define BH1750_DAT_SZ 2
 
 // Danger: These opecodes introduce unwanted behavior
 #define BH1750_PWR_OFF 0x00

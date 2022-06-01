@@ -82,6 +82,55 @@ int main() {
     gpio_put(GPIO_LED0, 0);
     gpio_put(GPIO_LED1, 1);
 
+    // FreeRTOS Initialization
+    // Variables for queue handles
+    QueueHandle_t xQLuxHandle = NULL;
+    QueueHandle_t xQAirHumHandle = NULL;
+    QueueHandle_t xQAirTempHandle = NULL;
+    QueueHandle_t xQSoilTempHandle = NULL;
+    QueueHandle_t xQSoilMoisHandle = NULL;
+
+    xQLuxHandle = xQueueCreate(dQUEUE_SIZE, BH1750_DAT_SZ);
+    if (xQLuxHandle != NULL) {
+        if (dertVERBOSE_LOGS)
+            printf("Created xQLuxHandle.\n");
+            printf("xQLuxHandle Address: %p", xQLuxHandle);
+    } else 
+        printf("! Error creating xQLuxHandle: Result null.\n");
+
+    xQAirHumHandle = xQueueCreate(dQUEUE_SIZE, BH1750_DAT_SZ);
+    if (xQAirHumHandle != NULL) {
+        if (dertVERBOSE_LOGS)
+            printf("Created xQAirHumHandle.\n");
+    } else 
+        printf("! Error creating xQAirHumHandle: Result null.\n");
+
+    xQAirTempHandle = xQueueCreate(dQUEUE_SIZE, BH1750_DAT_SZ);
+    if (xQAirTempHandle != NULL) {
+        if (dertVERBOSE_LOGS)
+            printf("Created xQAirTempHandle.\n");
+    } else 
+        printf("! Error creating xQAirTempHandle: Result null.\n");
+
+    xQSoilTempHandle = xQueueCreate(dQUEUE_SIZE, BH1750_DAT_SZ);
+    if (xQSoilTempHandle != NULL) {
+        if (dertVERBOSE_LOGS)
+            printf("Created xQSoilTempHandle.\n");
+    } else 
+        printf("! Error creating xQSoilTempHandle: Result null.\n");
+
+    xQSoilMoisHandle = xQueueCreate(dQUEUE_SIZE, BH1750_DAT_SZ);
+    if (xQSoilMoisHandle != NULL) {
+        if (dertVERBOSE_LOGS)
+            printf("Created xQSoilMoisHandle.\n");
+    } else 
+        printf("! Error creating xQSoilMoisHandle: Result null.\n");
+
+    // Queue Initializations complete
+    if (dertVERBOSE_LOGS) {
+        printf("\nDert queue initializations completed.\n\n");
+    }
+
     // Variables for creating tasks
     BaseType_t xTaskCreateRet;
     TaskHandle_t xLightHandle = NULL;
@@ -112,12 +161,12 @@ int main() {
         printf("xReportHandle not null.\n");
     } else { }
 
-    // Create dert_sense_air_task
+    // Create dert_sense_light_task
     xTaskCreateRet = xTaskCreate(
                         vDertSenseLight,
                         "SENSE_LIGHT",
                         dTASK_SIZE,
-                        (void * ) 0,
+                        (void * ) xQLuxHandle,
                         dertSENSE_LIGHT_TASK_PRIORITY,
                         &xLightHandle);
     // Debug Output (two checks)
@@ -132,7 +181,7 @@ int main() {
         printf("xReportHandle not null.\n");
     } else { }
 
-    // Create dert_sense_,soil_task
+    // Create dert_sense_soil_task
     xTaskCreateRet = xTaskCreate(
                         vDertSenseSoil,
                         "SENSE_SOIL",
@@ -193,7 +242,7 @@ int main() {
     } else { }
 
     if (dertVERBOSE_LOGS) {
-        printf("\nDert initialization completed.\n");
+        printf("\nDert task initialization completed.\n\n");
     }
 
 	// RTOS should never return from this call

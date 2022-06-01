@@ -7,6 +7,7 @@
 #include <stdio.h>
 
 #include "FreeRTOS.h"
+#include "queue.h"
 #include "task.h"
 
 #include "pico/stdlib.h"
@@ -20,9 +21,11 @@
 #include "dert_sense_light_task.h"
 
 void vDertSenseLight(void *pvParameters) {
+    QueueHandle_t* xQLuxHandle = (QueueHandle_t *)pvParameters;
     uint8_t light_sns_dat_tx;
-    uint8_t light_sns_dat_rx[2];
+    uint8_t light_sns_dat_rx[BH1750_DAT_SZ];
     int8_t light_sns_dat_err;
+    uint16_t light_sns_lux;
 
     for ( ;; ) {
         printf("\nDERT task: Sensing light.\n");
@@ -38,10 +41,16 @@ void vDertSenseLight(void *pvParameters) {
 			dertSNS_TIMEOUT_MS,
 			(char *)BH1750_NAME);
 
-		if (light_sns_dat_err > 0)
-			printf("Read 0x%x%x lux from %s.\n", light_sns_dat_rx[0], light_sns_dat_rx[1], BH1750_NAME);
-		else 
+        if (light_sns_dat_err > 0) {
+            if (dertVERBOSE_LOGS)
+                printf("Read 0x%x%x lux from %s.\n", light_sns_dat_rx[0], light_sns_dat_rx[1], BH1750_NAME);
+        }
+		else
 			printf("! Error: Read 0 bytes from %s.\n", BH1750_NAME);
+
+        light_sns_lux = (((light_sns_dat_rx[0] << 2) & 0xFF00) | light_sns_dat_rx[1]) / 1.2;
+
+        printf("Read %d lux from %s.", light_sns_lux, BH1750_NAME);
 
         vTaskDelay( dertSENSE_LIGHT_TASK_PERIOD );
     }

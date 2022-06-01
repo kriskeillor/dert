@@ -13,8 +13,9 @@
 #define dertSNS_TIMEOUT_MS                  ( 100000 )
 #define dertVERBOSE_LOGS                    ( 1UL )
 
-/* Dert Task Definitions */
-#define dTASK_SIZE                          ( 4096 )
+/* Dert Task & Queue Definitions */
+#define dTASK_SIZE                          ( 2048 )
+#define dQUEUE_SIZE                         ( 10 )
 
 /* Priorities for DERT tasks. */
 #define dertREPORT_DATA_TASK_PRIORITY       (tskIDLE_PRIORITY + 4UL)
