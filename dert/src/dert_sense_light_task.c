@@ -45,7 +45,12 @@ void vDertSenseLight(void *pvParameters) {
 		if (light_sns_dat_err > 0) {
             // Calculate lux and print to serial output
             light_sns_lux = (((light_sns_dat_rx[0] << BH1750_SHIFT) & 0xFF00) | light_sns_dat_rx[1]) / BH1750_DIV_FACTOR;
-            printf("+ Lux: %d\n", light_sns_lux);
+            printf("+LUX %d\n", light_sns_lux);
+            // Flash blue LED to indicate UART TX
+            gpio_put(GPIO_LED1, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED1, 0);
+            sleep_ms(50);
 
             // Detailed logging (raw readings)
             if (dertVERBOSE_LOGS) {
@@ -54,6 +59,10 @@ void vDertSenseLight(void *pvParameters) {
         }
 		else {
 			printf("! Error: Read 0 bytes from %s.\n", BH1750_NAME);
+            gpio_put(GPIO_LED0, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED0, 0);
+            sleep_ms(50);
         }
 
         // Delay task

@@ -56,7 +56,12 @@ void vDertSenseAir(void *pvParameters) {
             // Finally, convert to decimal
             air_sns_humidity_f = (float_t)air_sns_humidity / 100.0f;
             // Print
-            printf("+ Air RH: %f\n", air_sns_humidity_f);
+            printf("+ARH %f\n", air_sns_humidity_f);
+            // Flash blue LED to indicate UART TX
+            gpio_put(GPIO_LED1, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED1, 0);
+            sleep_ms(50);
 
             // Calculate temperature (in Farenheit) and print to serial output
             // First, combine data
@@ -66,7 +71,12 @@ void vDertSenseAir(void *pvParameters) {
             // Convert to decimal
             air_sns_temp_f = (float_t) air_sns_temp / 100.0f;
             // Print
-            printf("+ Air Temp: %f\n", air_sns_temp_f);
+            printf("+ATF %f\n", air_sns_temp_f);
+            // Flash blue LED to indicate UART TX
+            gpio_put(GPIO_LED1, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED1, 0);
+            sleep_ms(50);
 
             // Detailed logging (raw readings)
             if (dertVERBOSE_LOGS) {
@@ -76,6 +86,10 @@ void vDertSenseAir(void *pvParameters) {
         }
         else {
             printf("! Error %d from %s.\n", air_sns_dat_err, SHT30_NAME);
+            gpio_put(GPIO_LED0, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED0, 0);
+            sleep_ms(50);
         }
 
         vTaskDelay( dertSENSE_AIR_TASK_PERIOD );

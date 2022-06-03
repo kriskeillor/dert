@@ -26,7 +26,6 @@
 #include "dert_sense_air_task.h"
 #include "dert_sense_light_task.h"
 #include "dert_sense_soil_task.h"
-#include "dert_report_data_task.h"
 #include "dert_toggle_relays_task_test.h"
 
 int main() {
@@ -48,6 +47,9 @@ int main() {
     uart_init(UART_ID, UART_BAUD_RATE);
     gpio_set_function(UART_TX, GPIO_FUNC_UART);
     gpio_set_function(UART_RX, GPIO_FUNC_UART);
+    // * Disable RTS/CTS
+    uart_set_hw_flow(UART_ID, false, false);
+
 
 	// Initialize indicator LED pins
     gpio_init(GPIO_LED0);
@@ -75,9 +77,9 @@ int main() {
     if (dertVERBOSE_LOGS) {
         printf("\nRP-2040 initialization completed.\n");
     }
-    gpio_put(GPIO_LED0, 1);
+    gpio_put(GPIO_LED1, 1);
     sleep_ms(500);
-    gpio_put(GPIO_LED0, 0);
+    gpio_put(GPIO_LED1, 0);
 
     // Variables for creating tasks
     BaseType_t xTaskCreateRet;
@@ -132,21 +134,6 @@ int main() {
         printf("! Error creating task vDertSenseSoil.\n");
     } else if (dertVERBOSE_LOGS) {
         printf("Created task vDertSenseSoil.\n");
-    } else { }
-
-    // Create dert_report_data_task
-    xTaskCreateRet = xTaskCreate(
-                        vDertReportData,
-                        "REPORT_DATA",
-                        dTASK_SIZE,
-                        (void * ) 0,
-                        dertREPORT_DATA_TASK_PRIORITY,
-                        &xReportHandle);
-    // Debug Output (two checks)
-    if (xTaskCreateRet != pdPASS) {
-        printf("! Error creating task vDertReportData.\n");
-    } else if (dertVERBOSE_LOGS) {
-        printf("Created task vDertReportData.\n");
     } else { }
 
     // Create dert_toggle_relays_task

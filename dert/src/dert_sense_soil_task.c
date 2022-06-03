@@ -54,7 +54,12 @@ void vDertSenseSoil(void *pvParameters) {
             }
             // Calculate moisture as a percentage
             moisture_sns_moisture_f = (moisture_sns_moisture * 100.0f) / (CHIRP_MAX_MOIST - CHIRP_MIN_MOIST);
-            printf("+ Soil CWC: %f\n", moisture_sns_moisture_f);
+            printf("+SWC %f\n", moisture_sns_moisture_f);
+            // Flash blue LED to indicate UART TX
+            gpio_put(GPIO_LED1, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED1, 0);
+            sleep_ms(50);
 
             // Detailed logging (raw readings)
             if (dertVERBOSE_LOGS) {
@@ -62,7 +67,11 @@ void vDertSenseSoil(void *pvParameters) {
             } else { }
         }
         else {
-            printf("Error: Read 0 bytes from %s.\n", CHIRP_NAME);
+            printf("! Error: Read 0 bytes from %s.\n", CHIRP_NAME);
+            gpio_put(GPIO_LED0, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED0, 0);
+            sleep_ms(50);
         }
 
         // Soil Temperature Reading
@@ -78,14 +87,23 @@ void vDertSenseSoil(void *pvParameters) {
         // Print Temperature if we got the expected #/bytes returned
         if (moisture_sns_dat_err == CHIRP_GET_TEMP_LEN) {
             moisture_sns_temp_f = (((moisture_sns_dat_rx[0] << 8) & 0xFF00) | moisture_sns_dat_rx[1]) / 10.0f;
-            printf("+ Soil Temp: %f\n", moisture_sns_temp_f);
+            printf("+STC %f\n", moisture_sns_temp_f);
+            // Flash blue LED to indicate UART TX
+            gpio_put(GPIO_LED1, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED1, 0);
+            sleep_ms(50);
 
             if (dertVERBOSE_LOGS) {
                 printf("Read 0x%x%x temperature from %s.\n", moisture_sns_dat_rx[0], moisture_sns_dat_rx[1], CHIRP_NAME);
             } else { }
         }
         else {
-            printf("Error: Read 0 bytes from %s.\n", CHIRP_NAME); 
+            printf("! Error: Read 0 bytes from %s.\n", CHIRP_NAME); 
+            gpio_put(GPIO_LED0, 1);
+            sleep_ms(150);
+            gpio_put(GPIO_LED0, 0);
+            sleep_ms(50);
         }
 
         // Delay task
