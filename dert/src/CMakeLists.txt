@@ -11,7 +11,6 @@ target_sources(main
         dert_sense_air_task.c
         dert_sense_light_task.c
         dert_sense_soil_task.c
-        dert_report_data_task.c
         dert_toggle_relays_task_test.c
         dert_i2c.c)
 
