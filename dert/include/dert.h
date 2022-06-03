@@ -26,10 +26,6 @@
 #define dertSENSE_LIGHT_TASK_PERIOD         pdMS_TO_TICKS( 10000UL )
 #define dertSENSE_AIR_TASK_PERIOD           pdMS_TO_TICKS( 10000UL )
 
-/* Priority/period for relay toggle test. */
-#define dertTOGGLE_RELAYS_TASK_PRIORITY     (tskIDLE_PRIORITY + 5UL)
-#define dertTOGGLE_RELAYS_TASK_PERIOD       pdMS_TO_TICKS( 10000UL )
-
-/* TODO: Refactor I2C */ 
-bool i2c_res_addr(uint8_t addr);
-void i2c_scan(void);
+/* Priority/period for relay toggle test/demo. */
+#define dertTOGGLE_RELAYS_TASK_PRIORITY     (tskIDLE_PRIORITY + 4UL)
+#define dertTOGGLE_RELAYS_TASK_PERIOD       pdMS_TO_TICKS( 50UL )

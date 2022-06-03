@@ -19,28 +19,37 @@
 #include "dert_toggle_relays_task_test.h"
 
 void vDertToggleRelays(void *pvParameters) {
-    bool hvr_en = false;
-    bool lvr1_en = false;
-    bool lvr2_en = false;
-
     for ( ;; ) {
         if (dertVERBOSE_LOGS) {
-            printf("\nDert task: Toggling relays (test).\n");
+            printf("\nDert task: Toggling relays (demo).\n");
         } else { }
 
-        hvr_en = !hvr_en;
-        gpio_put(GPIO_HVR, hvr_en);
+        // Disable HV relay (active low) if Debug Bit 1 is being driven
+        if (gpio_get(GPIO_DB1)) {
+            gpio_put(GPIO_HVR, 1);
+        } else {
+            gpio_put(GPIO_HVR, 0);
+        }
 
-        lvr1_en = !lvr1_en;
-        lvr2_en = !lvr2_en;
-        gpio_put(GPIO_LVR1, lvr1_en);
-        gpio_put(GPIO_LVR2, lvr2_en);
+        // Enable LV relay 1 if Debug Bit 2 is being driven
+        if (gpio_get(GPIO_DB2)) {
+            gpio_put(GPIO_LVR1, 1);
+        } else {
+            gpio_put(GPIO_LVR1, 0);
+        }
+
+        // Enable LV relay 1 if Debug Bit 2 is being driven
+        if (gpio_get(GPIO_DB3)) {
+            gpio_put(GPIO_LVR2, 1);
+        } else {
+            gpio_put(GPIO_LVR2, 0);
+        }
 
         // Debug output
         if (dertVERBOSE_LOGS) {
-            printf("HVR GPIO output: %d, state: %d\n", hvr_en, gpio_get(GPIO_HVR));
-            printf("LVR1 GPIO output: %d, state: %d\n", lvr1_en, gpio_get(GPIO_LVR1));
-            printf("LVR2 GPIO output: %d, state: %d\n", lvr2_en, gpio_get(GPIO_LVR2));
+            printf("HVR GPIO output: %d\n", gpio_get(GPIO_HVR));
+            printf("LVR1 GPIO output: %d\n", gpio_get(GPIO_LVR1));
+            printf("LVR2 GPIO output: %d\n", gpio_get(GPIO_LVR2));
         }
 
         vTaskDelay( dertTOGGLE_RELAYS_TASK_PERIOD );
