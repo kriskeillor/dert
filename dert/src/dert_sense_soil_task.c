@@ -23,7 +23,7 @@
 void vDertSenseSoil(void *pvParameters) {
     uint8_t moisture_sns_dat_tx;
     uint8_t moisture_sns_dat_rx[2];
-    int moisture_sns_dat_err;
+    int32_t moisture_sns_dat_err;
     uint16_t moisture_sns_moisture;
     float_t moisture_sns_moisture_f;
     float_t moisture_sns_temp_f;
